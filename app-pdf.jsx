@@ -39,7 +39,7 @@ function GuideApp() {
     {
       day: 'J−10 · La question inconfortable',
       title: 'À qui appartient ce rapport ?',
-      body: 'Camille te le dit clairement dans ses mémos : "La question que Lou doit se poser : mon rapport protège qui ?" Tu travailles pour Sonia. Mais Théo présente au board lundi. Ce n\'est pas neutre — prends position.',
+      body: 'Camille te le dit clairement dans ses mémos : "ton rapport protège qui ?" Tu travailles pour Sonia. Mais Théo présente au board lundi. Ce n\'est pas neutre — prends position.',
       action: '→ Mémos vocaux → 3 enregistrements de Camille Ott'
     },
     {

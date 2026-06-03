@@ -514,7 +514,9 @@ function PacTimeline() {
 }
 
 
-function Desktop({ onLogout }) {
+function Desktop({ onLogout, timerStart }) {
+  // Reprise après reload : réassigne le timer fictif si la session le fournit
+  if (timerStart && !window.LUMIO_TIMER_START) window.LUMIO_TIMER_START = timerStart;
   const [windows, setWindows] = useWmState([]);
   const [zCounter, setZCounter] = useWmState(100);
   const [notifications, setNotifications] = useWmState([]);
