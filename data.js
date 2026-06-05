@@ -7,9 +7,9 @@
 
 window.LUMIO_DATA = {
   student: {
-    name: "{{PRENOM}}",
+    name: "Lou Bertrand",
     role: "Consultant·e externe — Mission de pilotage",
-    email: "{{EMAIL_ETUDIANT}}",
+    email: "lou.bertrand@consult.fr",
     company: "Indépendant·e"
   },
 
@@ -32,7 +32,7 @@ Troisième point : le post LinkedIn de Yassine du 14 janvier avec les résultats
 
 Le budget : Sonia, on est à 312 000 € engagés sur 200 000 € autorisés. Je sais que le board avait informellement évoqué une rallonge possible, mais elle n'a pas été votée. On ne peut pas continuer comme ça.
 
-Il faut qu'on parle demain matin. Et il faut que {{PRENOM}} produise un rapport d'étape avant la fin de semaine — je dois présenter une situation honnête au board lundi.
+Il faut qu'on parle demain matin. Et il faut que Lou produise un rapport d'étape avant la fin de semaine — je dois présenter une situation honnête au board lundi.
 
 T.`
   },
@@ -40,10 +40,10 @@ T.`
   // ─── EMAIL DE MISSION (brief) ───────────────────────────────
   briefEmail: {
     from: "Sonia Ferracci <sonia@lumio-health.com>",
-    to: "{{EMAIL_ETUDIANT}}",
+    to: "lou.bertrand@consult.fr",
     subject: "Mission de pilotage campagne — urgent — confidentiel",
     date: "19 janvier 2027, 07h15",
-    body: `{{PRENOM}},
+    body: `Lou,
 
 Je te contacte en urgence. J'ai besoin de toi aujourd'hui.
 
@@ -252,14 +252,14 @@ DRH — Decathlon France`
     {
       duration: "01:47",
       title: "Ce que je conseillerais si on me demandait",
-      transcript: `Si j'étais à la place de {{PRENOM}} — et j'ai pas cette responsabilité, c'est clair — ce que je ferais c'est distinguer ce qui est récupérable de ce qui ne l'est pas. Le claim juridique, on peut le changer. Le visuel "Métro", on peut le sortir de la rotation. Le budget dépassé, on peut l'expliquer si on présente un plan d'arrêt crédible. Ce qui est pas récupérable facilement, c'est la confiance de Théo vis-à-vis de Sonia. Et ça, c'est pas dans le rapport d'étape — c'est dans la tête de tout le monde. La question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c'est juste pour protéger Sonia, ça va pas tenir. Il faut que ce soit un vrai diagnostic.`
+      transcript: `Si j'étais à la place de Lou — et j'ai pas cette responsabilité, c'est clair — ce que je ferais c'est distinguer ce qui est récupérable de ce qui ne l'est pas. Le claim juridique, on peut le changer. Le visuel "Métro", on peut le sortir de la rotation. Le budget dépassé, on peut l'expliquer si on présente un plan d'arrêt crédible. Ce qui est pas récupérable facilement, c'est la confiance de Théo vis-à-vis de Sonia. Et ça, c'est pas dans le rapport d'étape — c'est dans la tête de tout le monde. La question que Lou doit se poser c'est : mon rapport protège qui ? Si c'est juste pour protéger Sonia, ça va pas tenir. Il faut que ce soit un vrai diagnostic.`
     }
   ],
 
   // ─── SLACK ──────────────────────────────────────────────────
   slackMessages: {
     initial: [
-      { from: "Sonia Ferracci", time: "07:18", text: "{{PRENOM}} — j'ai besoin de toi. Est-ce que tu as bien reçu mon mail de ce matin ?", read: true },
+      { from: "Sonia Ferracci", time: "07:18", text: "Lou — j'ai besoin de toi. Est-ce que tu as bien reçu mon mail de ce matin ?", read: true },
       { from: "Sonia Ferracci", time: "07:19", text: "C'est urgent. Vendredi 17h, rapport d'étape + plan de reprise. Théo présente lundi.", read: true },
     ],
     delayed: [

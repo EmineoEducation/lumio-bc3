@@ -4,11 +4,9 @@
 const { useState: useSlackState, useEffect: useSlackEffect, useRef: useSlackRef } = React;
 
 // ─── Sonia AI prompt ─────────────────────────────────────────
-function buildSoniaPrompt() {
-  const P = (window.LUMIO_DATA?._prenom) || (window.LUMIO_DATA?.student?.name || '').split(' ')[0] || 'le consultant';
-  return `Tu es Sonia Ferracci, Directrice Marketing de Lumio Health, 7 mois en poste.
+const SONIA_PROMPT = `Tu es Sonia Ferracci, Directrice Marketing de Lumio Health, 7 mois en poste.
 
-Tu viens de confier une mission urgente à ${P} (consultant·e externe) : produire un rapport d'étape honnête et un plan de reprise sur une campagne qui déraille. Tu es en position difficile : tu es à l'origine de plusieurs des problèmes (dépassements budgétaires, lancement sans validation juridique du claim, décision de garder le visuel "Métro" malgré les alertes). Théo Marczak (CEO) présente au board lundi matin. Tu as besoin que ${P} produise quelque chose d'utilisable — mais tu sais que le rapport va te fragiliser.
+Tu viens de confier une mission urgente à Lou Bertrand (consultant·e externe) : produire un rapport d'étape honnête et un plan de reprise sur une campagne qui déraille. Tu es en position difficile : tu es à l'origine de plusieurs des problèmes (dépassements budgétaires, lancement sans validation juridique du claim, décision de garder le visuel "Métro" malgré les alertes). Théo Marczak (CEO) présente au board lundi matin. Tu as besoin que Lou produise quelque chose d'utilisable — mais tu sais que le rapport va te fragiliser.
 
 Ce que tu sais :
 - Budget engagé : 312 000 € / Budget autorisé : 200 000 €. Dépassement de 112 000 € sur la base d'une "autorisation informelle" de Jakob (Northgate) que tu n'as pas formalisée.
@@ -19,16 +17,15 @@ Ce que tu sais :
 Ton style en messagerie :
 - Phrases courtes, directes, parfois sèches
 - Tu n'es pas dans la défense permanente mais tu n'acceptes pas non plus les procès d'intention
-- Tu attends de ${P} une lecture professionnelle et sans complaisance, pas du réconfort
-- Si ${P} te propose quelque chose de flou, tu le dis clairement
-- Si ${P} identifie bien un problème, tu poses une question plus profonde plutôt que de valider
+- Tu attends de Lou une lecture professionnelle et sans complaisance, pas du réconfort
+- Si Lou te propose quelque chose de flou, tu le dis clairement
+- Si Lou identifie bien un problème, tu poses une question plus profonde plutôt que de valider
 
 Format de réponse :
 - 2 à 4 messages courts, séparés par "---SPLIT---"
 - Maximum 180 mots cumulés
 - Termine par une question précise ou une consigne pour la suite
-- N'utilise jamais "Bonjour ${P}" ni "Merci pour ta contribution"`;
-}
+- N'utilise jamais "Bonjour Lou" ni "Merci pour ta contribution"`;
 
 function SlackApp({ openChannel }) {
   const D = window.LUMIO_DATA;
@@ -56,7 +53,7 @@ function SlackApp({ openChannel }) {
 
   const seed = {
     sonia: [
-      { from: 'Sonia Ferracci', avatar: 'SF', color: '#c4420f', time: '07:18', text: `${(window.LUMIO_DATA?._prenom)||(window.LUMIO_DATA?.student?.name||'').split(' ')[0]||'Bonjour'} — j'ai besoin de toi. Est-ce que tu as bien reçu mon mail de ce matin ?` },
+      { from: 'Sonia Ferracci', avatar: 'SF', color: '#c4420f', time: '07:18', text: 'Lou — j\'ai besoin de toi. Est-ce que tu as bien reçu mon mail de ce matin ?' },
       { from: 'Sonia Ferracci', avatar: 'SF', color: '#c4420f', time: '07:19', text: 'C\'est urgent. Vendredi 17h, rapport d\'étape + plan de reprise. Théo présente lundi.' }
     ],
     camille: [
@@ -135,7 +132,7 @@ PLAN : ${plan.substring(0, 600)}...`;
     setDraft('');
     const now = new Date();
     const time = `${now.getHours().toString().padStart(2,'0')}:${now.getMinutes().toString().padStart(2,'0')}`;
-    const userMsg = { from: window.LUMIO_DATA?.student?.name || "Consultant·e", avatar: window.LUMIO_DATA?.student?.initial || "LB", color: '#1a2436', time, text, isMe: true };
+    const userMsg = { from: window.LUMIO_DATA?.student?.name || "Lou Bertrand", avatar: window.LUMIO_DATA?.student?.initial || "LB", color: '#1a2436', time, text, isMe: true };
     setChatHistory(h => ({ ...h, [activeId]: [...(h[activeId]||[]), userMsg] }));
 
     if (isSonia) {
@@ -146,12 +143,11 @@ PLAN : ${plan.substring(0, 600)}...`;
       setSending(true);
       setTimeout(async () => {
         try {
-          const history = (chatHistory.sonia || []).filter(m => !m.typing).map(m => `${m.isMe ? ((window.LUMIO_DATA?._prenom)||'Consultant') : 'Sonia'}: ${m.text}`).join('\n');
-          const _p = (window.LUMIO_DATA?._prenom) || (window.LUMIO_DATA?.student?.name || '').split(' ')[0] || 'Consultant';
-          const userPrompt = `${history}\n${_p}: ${text}\n\nRéponds maintenant en tant que Sonia (2-4 messages courts séparés par ---SPLIT---).`;
+          const history = (chatHistory.sonia || []).filter(m => !m.typing).map(m => `${m.isMe ? 'Lou' : 'Sonia'}: ${m.text}`).join('\n');
+          const userPrompt = `${history}\nLou: ${text}\n\nRéponds maintenant en tant que Sonia (2-4 messages courts séparés par ---SPLIT---).`;
           const resp = await fetch('/api/chat', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ model: 'claude-sonnet-4-5', max_tokens: 600, system: buildSoniaPrompt(), messages: [{ role: 'user', content: userPrompt }] })
+            body: JSON.stringify({ model: 'claude-sonnet-4-5', max_tokens: 600, system: SONIA_PROMPT, messages: [{ role: 'user', content: userPrompt }] })
           });
           if (!resp.ok) { const err = await resp.json().catch(() => ({})); throw new Error(err.error || `HTTP ${resp.status}`); }
           const data = await resp.json();
@@ -182,7 +178,7 @@ PLAN : ${plan.substring(0, 600)}...`;
       <div style={slackStyles.sidebar} className="scroll">
         <div style={slackStyles.workspace}>
           <div style={{ fontSize: 14, fontWeight: 700 }}>Lumio Health</div>
-          <div style={{ fontSize: 10, opacity: 0.7, marginTop: 2 }}>{`● ${window.LUMIO_DATA?.student?.name || "Consultant·e"} · invité`}</div>
+          <div style={{ fontSize: 10, opacity: 0.7, marginTop: 2 }}>{`● ${window.LUMIO_DATA?.student?.name || "Lou Bertrand"} · invité`}</div>
         </div>
         <div style={slackStyles.section}>
           <div style={slackStyles.sectionTitle}>▼ Canaux</div>

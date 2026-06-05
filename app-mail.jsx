@@ -16,7 +16,7 @@ function MailApp({ winId, openId }) {
       avatarColor: '#c4420f',
       subject: 'Mission de pilotage campagne — urgent — confidentiel',
       date: '19/01/27 · 07:15',
-      preview: window.LUMIO_DATA?._briefPreview || 'Je te contacte en urgence. J\'ai besoin de toi aujourd\'hui…',
+      preview: 'Lou, Je te contacte en urgence. J\'ai besoin de toi aujourd\'hui…',
       unread: false,
       flagged: true,
       body: D.briefEmail.body,
@@ -180,7 +180,7 @@ function MailApp({ winId, openId }) {
               <div style={{ ...mailStyles.avatar, width: 36, height: 36, fontSize: 13, background: selected.avatarColor }}>{selected.avatar}</div>
               <div>
                 <div style={{ fontSize: 13, fontWeight: 600, color: 'var(--ink)' }}>{selected.from} <span style={{ color: 'var(--ink-faint)', fontWeight: 400 }}>&lt;{selected.fromEmail}&gt;</span></div>
-                <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>À : {window.LUMIO_DATA?.student?.name || "Consultant·e"} · {selected.date}</div>
+                <div style={{ fontSize: 12, color: 'var(--ink-mute)' }}>À : {window.LUMIO_DATA?.student?.name || "Lou Bertrand"} · {selected.date}</div>
               </div>
             </div>
           </div>
