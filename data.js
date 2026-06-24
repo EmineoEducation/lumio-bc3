@@ -407,3 +407,7 @@ window.PASS_CONFIG = {
     }
   }
 };
+
+
+// Alias de compatibilité — les apps génériques lisent window.PAC_CONFIG
+window.PAC_CONFIG = window.PASS_CONFIG;
