@@ -48,7 +48,7 @@ Une seule question qu'un jury poserait à l'oral — précise, dérangeante, san
 Règles : ne rédige pas de rapport alternatif. Ne complète pas les lacunes. Si une compétence est absente, écris "Absent" et une phrase. Cite les mots de l'étudiant.`;
 
 function LivrableApp() {
-  const cfg = window.PAC_CONFIG;
+  const cfg = window.PASS_CONFIG;
   const COMPETENCES = cfg ? cfg.competences : [];
 
   const [answers, setAnswers] = React.useState(() => {
