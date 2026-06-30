@@ -296,83 +296,97 @@ window.PASS_CONFIG = {
       objectif: 'Qualifier les risques, trier récupérable / non récupérable, envoyer hypothèse à Sonia',
       todoSuggere: [
         'Envoyer une première lecture à Sonia (Slack)',
-        'Remplir C.7 et C.8 dans le Livrable',
+        'Remplir C.13 et C.14 dans le Livrable',
         'Identifier les 3 acteurs responsables et leur part dans l\'incident',
-        'Construire la matrice risques C.9'
+        'Construire la matrice risques C.17/C.18'
       ]
     },
     { n: 3, label: 'Production', debut: 150, fin: 210, couleur: '#c4420f',
-      objectif: 'Finaliser le rapport d\'étape C.10, le plan de reprise C.11, commencer la note réflexive',
+      objectif: 'Finaliser le rapport d\'étape C.19, le plan de reprise C.14, commencer la note réflexive',
       todoSuggere: [
-        'Finaliser C.10 — Rapport d\'étape honnête (risques, responsabilités, chiffres)',
-        'Formaliser C.11 — Plan de reprise 7 jours (arrêts, ajustements, préservation)',
-        'Rédiger la Note réflexive E5 (C.12)',
+        'Finaliser C.19 — Rapport d\'étape honnête (risques, responsabilités, chiffres)',
+        'Formaliser C.14 — Plan de reprise 7 jours (arrêts, ajustements, préservation)',
+        'Rédiger la Note réflexive E5',
         'Vérifier les minimums de mots',
         'Soumettre à Sonia'
       ]
     }
   ],
 
+  note_reflexive: true,
+  noteReflexiveMinMots: 120,
+  livrableMinMots: 700,
+
   competences: [
     {
-      code: 'C.7',
-      label: 'Analyser un écart entre objectifs et réalisations',
-      libelle: 'Écart',
-      rncp: 'Identifier et qualifier les écarts entre le cahier des charges initial et l\'état d\'avancement réel (budgétaire, créatif, calendaire, réglementaire). Distinguer les écarts maîtrisables des écarts structurels.',
-      placeholder: 'Quels sont les écarts constatés entre le brief initial et la situation au 19 janvier ? Comment les hiérarchises-tu ?',
+      code: 'C.13',
+      label: 'Cadrage des actions — brief et cahier des charges',
+      libelle: 'Cadrage',
+      rncp: 'Elaborer ou valider l\'élaboration des documents de référence — cahier des charges, brief — cadrant la réalisation des actions déclinant la stratégie marketing communication, en veillant à leur qualité formelle ainsi qu\'à la présence de critères sociaux et environnementaux.',
+      placeholder: 'Analysez le brief initial de la campagne « Fantôme de Soi ». Était-il complet ? Les critères qualité, coût, délai et RSE étaient-ils précisés ? Qu\'est-ce qui a manqué ?',
       min: 100,
-      motsCles: ['écart', 'budget', 'brief', '200 000', '312 000', 'claim', 'juridique', 'visuel', 'calendrier'],
-      conseil: 'Il y a 4 dimensions d\'écart distinctes : budgétaire, créative (claim), éthique (visuel), process (publication non validée). Toutes doivent être nommées.'
+      motsCles: ['brief', 'cahier des charges', 'Alter Scope', 'critères', 'RSE', 'budget', 'spécifications', '200 000', 'qualité', 'délai'],
+      conseil: 'Le brief initial ne comportait ni plafond budgétaire explicite, ni processus de validation intermédiaire, ni critères RSE. C\'est la racine structurelle de la dérive.'
     },
     {
-      code: 'C.8',
-      label: 'Analyser les responsabilités dans la dérive',
-      libelle: 'Responsabilités',
-      rncp: 'Identifier les décisions qui ont conduit à la dérive et leurs acteurs. Distinguer les responsabilités individuelles des défaillances de pilotage. Éviter à la fois la décharge et la sur-attribution.',
-      placeholder: 'Qui a pris quelles décisions ? Comment analyses-tu la répartition des responsabilités entre Sonia, Yassine, Alter Scope et le processus de validation ?',
-      min: 100,
-      motsCles: ['Sonia', 'Yassine', 'Alter Scope', 'décision', 'validation', 'responsabilité', 'processus', 'autorisation'],
-      conseil: 'Sonia a pris des décisions de dépassement. Yassine a publié sans validation. Alter Scope avait signalé la validation juridique en attente. Le process de validation était absent — c\'est une responsabilité organisationnelle.'
-    },
-    {
-      code: 'C.9',
-      label: 'Évaluer les risques actifs',
-      libelle: 'Risques',
-      rncp: 'Pour chaque problème identifié, qualifier le niveau de risque (juridique, financier, réputationnel, relationnel client) et son urgence. Prioriser les actions selon leur impact et leur délai de traitement.',
-      placeholder: 'Quels sont les risques actifs à ce jour ? Comment les classes-tu par urgence et par nature ?',
-      min: 80,
-      motsCles: ['risque', 'juridique', 'Withings', 'Decathlon', 'RSE', 'financier', 'réputationnel', 'urgence', 'priorité'],
-      conseil: 'Risque juridique (claim Withings) : urgent, potentiellement grave mais gérable par retrait préventif. Risque client (Decathlon) : urgent, 147K€, relation à réparer. Risque gouvernance (budget non autorisé) : interne, grave. Risque réputation (Instagram) : modéré, déjà partiel.'
-    },
-    {
-      code: 'C.10',
-      label: 'Produire un rapport d\'étape certifiant',
-      libelle: 'Rapport étape',
-      rncp: 'Rédiger un rapport d\'étape objectif, factuel et actable : situation à date, chiffres exacts, décisions qui ont conduit à l\'état actuel, sans euphémisme ni surprotection d\'un acteur. Format attendu par un board.',
-      placeholder: 'Rédige le rapport d\'étape que Théo peut présenter au board lundi. Situation à date, faits, chiffres, causes.',
-      min: 180,
-      motsCles: ['rapport', 'étape', 'situation', '312 000', 'visuel', 'claim', 'Decathlon', 'Yassine', 'board', 'factuel'],
-      conseil: 'C\'est le livrable central. Il doit être lisible par Théo sans travail de réécriture. Structure attendue : situation à date / causes identifiées / risques actifs / décisions prises à ce jour.'
-    },
-    {
-      code: 'C.11',
-      label: 'Construire un plan de reprise opérationnel',
-      libelle: 'Plan reprise',
-      rncp: 'Proposer un plan d\'action à 7 jours distinguant ce qu\'on arrête immédiatement, ce qu\'on ajuste, et ce qu\'on préserve. Chaque action doit avoir un responsable, un délai et un critère de succès.',
-      placeholder: 'Qu\'est-ce qu\'on arrête, qu\'est-ce qu\'on ajuste, qu\'est-ce qu\'on préserve dans les 7 prochains jours ? Avec qui, et selon quel critère de réussite ?',
+      code: 'C.14',
+      label: 'Organisation du déploiement et plan de reprise',
+      libelle: 'Plan de reprise',
+      rncp: 'Organiser globalement la mise en œuvre des actions déclinant la stratégie marketing communication, en déterminant les méthodes de conduite de projet à mobiliser, en s\'assurant de la cohérence de leur calendrier et en définissant les outils de planification, suivi et évaluation.',
+      placeholder: 'Proposez un plan de reprise structuré à 7 jours : STOP / ADJUST / KEEP. Chaque action avec un responsable, un délai, un critère de succès.',
       min: 150,
-      motsCles: ['arrêter', 'ajuster', 'préserver', 'responsable', 'délai', '7 jours', 'Decathlon', 'claim', 'visuel', 'budget'],
-      conseil: 'Structure en 3 colonnes : STOP (visuel Metro, claim en attente retrait) / ADJUST (médias à geler, publication process) / KEEP (momentum Préventica, leads entrants, relation Camille clients). Chaque ligne : qui / quoi / avant quand.'
+      motsCles: ['arrêter', 'ajuster', 'préserver', 'responsable', 'délai', '7 jours', 'calendrier', 'outil', 'méthode', 'suivi'],
+      conseil: 'Structure en 3 colonnes : STOP (visuel Metro, claim en attente retrait) / ADJUST (médias à geler, process publication) / KEEP (leads Préventica, relation Camille clients). Chaque ligne : qui / quoi / avant quand.'
     },
     {
-      code: 'C.12',
-      label: 'Note réflexive — E5',
-      libelle: 'Réflexivité',
-      rncp: 'Identifier ce que cette situation t\'a appris sur la gestion de la relation client-agence, sur les processus de validation, et sur ton positionnement de consultant externe. Quelles compétences as-tu mobilisées ? Quelles lacunes as-tu identifiées ?',
-      placeholder: 'Qu\'est-ce que cette situation t\'a appris sur toi en tant que consultant ? Sur le pilotage d\'une campagne en tension ? Sur la relation avec un commanditaire en difficulté ?',
-      min: 120,
-      motsCles: ['appris', 'posture', 'consultant', 'commanditaire', 'compétence', 'lacune', 'pilotage', 'éthique', 'réflexivité'],
-      conseil: 'La note réflexive E5 attend trois niveaux : ce que j\'ai fait / ce que j\'aurais pu faire différemment / ce que ça dit de ma posture professionnelle. Évite l\'autocritique molle ou le bilan purement positif.'
+      code: 'C.15',
+      label: 'Constitution et dimensionnement de l\'équipe',
+      libelle: 'Équipe',
+      rncp: 'Constituer les équipes internes impliquées dans la réalisation des actions déclinant la stratégie marketing communication, en veillant à leur bon dimensionnement et aux conditions d\'inclusion.',
+      placeholder: 'Analysez les rôles et responsabilités dans l\'équipe campagne. Qui a décidé quoi ? Proposez une répartition claire des missions pour le plan de reprise.',
+      min: 80,
+      motsCles: ['Sonia', 'Yassine', 'rôle', 'responsabilité', 'dimensionnement', 'compétences', 'validation', 'autorisation'],
+      conseil: 'Sonia a pris des décisions de dépassement. Yassine a publié sans validation. Le process de validation était absent — responsabilité organisationnelle, pas seulement individuelle.'
+    },
+    {
+      code: 'C.16',
+      label: 'Animation des parties prenantes en situation de crise',
+      libelle: 'Parties prenantes',
+      rncp: 'Animer l\'écosystème des parties prenantes impliquées dans la réalisation des actions marketing communication, en mettant en œuvre un management de type collaboratif propice à l\'innovation et contribuant à l\'expression des talents individuels.',
+      placeholder: 'Comment gérez-vous les relations avec les parties prenantes en situation de crise ? Decathlon (client menacé), Northgate (fonds informé), équipe interne (confiance rompue).',
+      min: 100,
+      motsCles: ['Decathlon', 'Northgate', 'Jakob', 'management', 'collaboratif', 'communication', 'crise', 'parties prenantes', 'confiance'],
+      conseil: 'Decathlon menace (147K€), Northgate est informé, l\'équipe interne est déstabilisée. Le management collaboratif s\'applique aussi — et surtout — en crise.'
+    },
+    {
+      code: 'C.17',
+      label: 'Gestion du prestataire Alter Scope et alignement RSE',
+      libelle: 'Prestataires & RSE',
+      rncp: 'Gérer le portefeuille de prestataires et fournisseurs participant à la réalisation des actions de communication, en vérifiant l\'alignement de leurs pratiques avec les engagements RSE de la marque et en entretenant des relations pérennes et équilibrées.',
+      placeholder: 'Évaluez la relation avec Alter Scope. Le visuel Métro viole les engagements RSE de Decathlon, le claim pose un risque juridique Withings. Proposez un plan de recadrage.',
+      min: 80,
+      motsCles: ['Alter Scope', 'prestataire', 'RSE', 'visuel', 'stigmatisation', 'claim', 'Withings', 'évaluation', 'contractualisation'],
+      conseil: 'Le visuel Métro a été livré sans validation RSE. Le claim était signalé comme "en attente validation juridique". L\'alignement RSE du prestataire n\'a jamais été vérifié contractuellement.'
+    },
+    {
+      code: 'C.18',
+      label: 'Indicateurs de pilotage et mesure d\'impact',
+      libelle: 'KPI & pilotage',
+      rncp: 'Organiser la mesure de l\'impact de la stratégie marketing communication entreprise, en déterminant les données, critères et indicateurs de performance clés permettant d\'en mesurer la portée, ainsi que les outils digitaux associés.',
+      placeholder: 'Quels indicateurs auraient dû alerter plus tôt ? Quels KPI pour piloter la reprise ? Intégrez dimensions quali/quanti et RSE.',
+      min: 80,
+      motsCles: ['KPI', 'indicateur', 'impact', 'ROI', 'budget', '312 000', 'mesure', 'outil', 'alerte', 'tableau de bord'],
+      conseil: 'Budget engagé 312K vs 200K autorisés, publications non validées, leads entrants, commentaires Instagram — tous des signaux captables. Proposez un tableau de bord de reprise.'
+    },
+    {
+      code: 'C.19',
+      label: 'Interprétation des écarts et rapport d\'étape',
+      libelle: 'Rapport d\'étape',
+      rncp: 'Interpréter les métriques restituant les résultats de la stratégie marketing communication entreprise, afin de vérifier l\'atteinte des objectifs définis ou d\'en mesurer les écarts et, le cas échéant, de décider des mesures correctives à mettre en œuvre.',
+      placeholder: 'Rédigez le rapport d\'étape que Théo peut présenter au board lundi. Situation à date, faits chiffrés, causes, écarts par rapport aux objectifs, mesures correctives proposées.',
+      min: 180,
+      motsCles: ['rapport', 'étape', 'écart', '312 000', '200 000', 'visuel', 'claim', 'Decathlon', 'Yassine', 'board', 'factuel', 'correctif'],
+      conseil: 'C\'est le livrable central. Il doit être lisible par Théo sans réécriture. Structure : situation à date / écarts mesurés / causes identifiées / risques actifs / mesures correctives proposées.'
     }
   ],
 
@@ -407,3 +421,15 @@ window.PASS_CONFIG = {
     }
   }
 };
+
+// === [PAC v2 complétion] juryPrompt + dispositif + accroche — auto-ajout ===
+(function() {
+  var cfg = window.PAC_CONFIG || window.PASS_CONFIG;
+  if (!cfg) return;
+  cfg.juryPrompt = "Tu es le jury certifiant du bloc 3 — Piloter le déploiement d'une stratégie marketing communication responsable (Manager Stratégie Marketing & Communication — MSMC, RNCP 38504).\nContexte : Lumio Health — Campagne « Fantôme de Soi » (Alter Scope) en dérive. Budget engagé 312 000 € sur 200 000 € autorisés. Claim « Votre corps parle avant vous » menacé par similarité Withings UK. Visuel Metro accusé de stigmatisation — Decathlon (147K€) menace de ne pas renouveler. Yassine Morel publie des résultats intermédiaires sans validation. Janvier 2027, board Lumio 24/01 09h00.\nTu évalues une production étudiante aux critères RNCP stricts. Sois exigeant mais juste.\nCritères éliminatoires :\n- Le cadrage initial (C.13) n'est pas analysé — le brief Alter Scope n'est pas questionné sur ses manques (critères RSE absents, budget non plafonné, process de validation inexistant) : invalidation immédiate.\n- Le plan de reprise (C.14) ne comporte pas de structure opérationnelle claire (STOP / ADJUST / KEEP ou équivalent), de responsables nommés et de délais réalistes : invalidation C.14.\n- L'analyse des rôles (C.15) confond Sonia (décisions de dépassement) et Yassine (publication non validée) ou tait l'absence de process de validation : la compétence n'est pas démontrée.\n- La gestion des parties prenantes (C.16) n'identifie pas les 3 niveaux de crise (client Decathlon, fonds Northgate, équipe interne) ou ne propose aucune stratégie de communication adaptée : invalidation C.16.\n- L'évaluation du prestataire Alter Scope (C.17) ne questionne pas l'alignement RSE, le claim juridique ou les conditions contractuelles : la compétence reste théorique.\n- Les indicateurs de pilotage (C.18) n'identifient pas les signaux d'alerte qui auraient dû prévenir la dérive (budget, publications, commentaires) : invalidation C.18.\n- Le rapport d'étape (C.19) n'est pas structuré factuel-écarts-causes-correctifs ou ne mentionne pas les éléments du board (312K€, visuel, Decathlon, Yassine) : la compétence n'est pas conforme.\n- La note réflexive reste descriptive et ne formule pas d'apprentissage explicite sur la posture du consultant face au commanditaire : non validée.\n\nRéponds EXACTEMENT dans ce format :\n### C.13 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.14 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.15 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.16 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.17 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.18 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### C.19 — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n### Note réflexive — [Satisfaisant / Insuffisant / Absent]\nUne phrase de retour précise et exigeante.\n\n## Niveau global\n**[Non conforme / Partiellement conforme / Conforme / Conforme avec distinction]**\n\n## Question de jury\nUne question dérangeante que tu poserais à l'oral.";
+  if (!cfg.dispositif) cfg.dispositif = "PAC";
+  if (!cfg.accroche_namescreen) cfg.accroche_namescreen = {"intro":"Tu es {{STUDENT}}, consultant·e externe rappelé·e en urgence par Sonia Ferracci. La campagne « Fantôme de Soi » dérape — budget, claim juridique, visuel contesté. Tu dois produire le rapport d'étape et le plan de reprise.","ratio_label":"18 jours dans l'univers Lumio","regles":[{"ico":"📄","txt":"Tout ce que tu sais, c'est dans les documents du poste de mission."},{"ico":"🤐","txt":"Le jury teste chaque hypothèse. Il ne cherche pas à t'aider — il évalue."},{"ico":"💬","txt":"Quand tu as une hypothèse solide → Slack → ton commanditaire. Sa réaction débloque la suite."}]};
+  window.PAC_CONFIG = cfg;
+  window.PASS_CONFIG = cfg;
+})();
+// === [PAC v2 complétion] fin ===
