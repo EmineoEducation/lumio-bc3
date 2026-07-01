@@ -457,3 +457,260 @@ window.PASS_CONFIG = {
   window.PASS_CONFIG = cfg;
 })();
 // === [PAC v2 complétion] fin ===
+
+
+// === [Chantier PDF+Browser] dossiers/guide/portraits — 02/07/2026 ===
+// Restructuration de D.alterScopeBrief + D.yassineReport (déjà écrits) en D.dossiers[]. Guide construit depuis PAC_CONFIG.temps[].objectif/todoSuggere (déjà écrits).
+// Aucun contenu narratif nouveau : uniquement restructuration + câblage.
+(function() {
+  var D = window.LUMIO_DATA;
+  if (!D) return;
+  D.dossiers = [
+  {
+    "id": "brief-alterscope",
+    "title": "Brief créatif — Campagne « Fantôme de Soi »",
+    "tab": "Brief Alter Scope",
+    "accent": "#c4420f",
+    "type": "rich",
+    "pages": [
+      {
+        "kicker": "Lumio Health × Alter Scope Agency",
+        "title": "Brief créatif — Campagne « Fantôme de Soi »",
+        "byline": "Yassine Morel (Lumio) / Équipe création Alter Scope · 15 octobre 2026",
+        "blocks": [
+          {
+            "type": "h3",
+            "text": "CONTEXTE CLIENT"
+          },
+          {
+            "type": "p",
+            "text": "Lumio Health relance sa communication suite au repositionnement « santé invisible » validé en septembre 2026. L'objectif est de faire connaître la marque auprès d'une cible B2B (DRH, médecins du travail) et d'amorcer une présence B2C (actifs urbains 30-50 ans)."
+          },
+          {
+            "type": "p",
+            "text": "Budget validé : 200 000 € (enveloppe annuelle)\nRépartition indicative : 35% prod créa, 40% médias, 25% activation événementielle"
+          },
+          {
+            "type": "h3",
+            "text": "INSIGHT CENTRAL"
+          },
+          {
+            "type": "p",
+            "text": "Le stress chronique est un fantôme — présent partout, visible nulle part. Les gens le ressentent mais ne le voient pas. Les médecins ne l'objectivent pas. Les DRH ne savent pas le mesurer. Lumio rend le fantôme visible."
+          },
+          {
+            "type": "h3",
+            "text": "TERRITOIRE CRÉATIF"
+          },
+          {
+            "type": "p",
+            "text": "« Fantôme de Soi » — la version de soi que le stress chronique efface progressivement. La campagne montre des moments du quotidien où quelqu'un est là physiquement mais absent mentalement : en réunion, dans le métro, au dîner en famille."
+          },
+          {
+            "type": "h3",
+            "text": "CLAIM PRINCIPAL"
+          },
+          {
+            "type": "p",
+            "text": "« Votre corps parle avant vous. »"
+          },
+          {
+            "type": "h3",
+            "text": "DÉCLINAISONS VISUELLES (validées par Sonia Ferracci — réunion du 18 octobre)"
+          },
+          {
+            "type": "p",
+            "text": "1. Visuel \"Réunion\" — salarié en réunion, regard vague, post-its autour de lui invisibles\n2. Visuel \"Métro\" — femme assise, yeux dans le vide, cercles noirs, foule floue autour d'elle\n3. Visuel \"Dîner\" — homme regardant son assiette, famille floue, silence visible"
+          },
+          {
+            "type": "h3",
+            "text": "FORMATS"
+          },
+          {
+            "type": "p",
+            "text": "Display B2B : LinkedIn Sponsored Content, Newsletter RH Partenaires\nAffichage : 8x2 Paris + Lyon (quartiers d'affaires)\nDigital B2C : Instagram, YouTube pre-roll\nÉvénementiel : Forum Préventica (prévu mars 2027)"
+          },
+          {
+            "type": "h3",
+            "text": "NOTES"
+          },
+          {
+            "type": "p",
+            "text": "— Le visuel \"Métro\" est le plus impactant selon les tests internes Alter Scope (recall +34%)\n— Validation juridique du claim : en cours au moment du brief / à boucler avant lancement\n— Décision de lancement anticipé prise par Sonia Ferracci le 2 novembre en accord avec Yassine Morel (décalage de la validation juridique pour tenir le planning)"
+          },
+          {
+            "type": "h3",
+            "text": "CALENDRIER"
+          },
+          {
+            "type": "p",
+            "text": "Semaine 46 (nov.) : BAT visuels + finalisation claim\nSemaine 47 : Lancement campagne display B2B\nSemaine 50 : Lancement affichage + digital B2C\nJanvier 2027 : Bilan mi-parcours (prévu)\nMars 2027 : Événement Préventica"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "resultats-campagne",
+    "title": "Résultats intermédiaires — Campagne Fantôme de Soi",
+    "tab": "Résultats campagne",
+    "accent": "#0a7a6e",
+    "type": "rich",
+    "pages": [
+      {
+        "kicker": "Semaines 47 à 2 (nov. 2026 – jan. 2027)",
+        "title": "Résultats intermédiaires — Campagne Fantôme de Soi",
+        "byline": "Yassine Morel, Content Manager · 14 janvier 2027",
+        "blocks": [
+          {
+            "type": "h3",
+            "text": "RÉSUMÉ EXÉCUTIF"
+          },
+          {
+            "type": "p",
+            "text": "Résultats globaux au 14 janvier 2027 :\n— Impressions totales : 4 200 000 (Display + Affichage + LinkedIn + Instagram)\n— CPM Display B2B : 14,20 €/mille (objectif : 12 €) → dépassement +18%\n— Taux d'engagement LinkedIn : 2,1% (objectif : 1,5%) → au-dessus objectif ✓\n— Couverture affichage Paris/Lyon : 89% des panneaux commandés déployés ✓\n— Leads DRH entrants via campagne : 23 (objectif mensuel : 15) ✓"
+          },
+          {
+            "type": "h3",
+            "text": "RÉPARTITION BUDGÉTAIRE AU 14 JANVIER"
+          },
+          {
+            "type": "p",
+            "text": "Production créa         : 89 400 €  (budget alloué : 70 000 €)  → dépassement +27%\nMédias display/social   : 142 000 € (budget alloué : 80 000 €)  → dépassement +77%\nAffichage Paris+Lyon    : 61 200 €  (budget alloué : 50 000 €)  → dépassement +22%\nActivation Préventica   : 19 400 €  (budget alloué : 0 €)       → hors budget\n─────────────────────────────────────────────────────────────────────────────────\nTOTAL ENGAGÉ            : 312 000 €  BUDGET AUTORISÉ : 200 000 €  ÉCART : +56%"
+          },
+          {
+            "type": "h3",
+            "text": "NOTE SUR L'ÉVOLUTION BUDGÉTAIRE"
+          },
+          {
+            "type": "p",
+            "text": "Les dépassements sont liés à trois décisions prises en cours de campagne :\n1. Ajout d'un format YouTube pre-roll (décision Sonia, 3 nov.) : +22 000 €\n2. Extension affichage Lyon (décision Sonia, 15 nov.) : +11 200 €\n3. Inscription Préventica (décision Sonia + Yassine, 1 déc.) : +19 400 €\n4. Surcoût production retouches visuelles suite retours Alter Scope (partagé) : +19 400 €"
+          },
+          {
+            "type": "h3",
+            "text": "SIGNAUX ENTRANTS"
+          },
+          {
+            "type": "p",
+            "text": "— 3 DRH ont demandé une démo suite au visuel \"Réunion\" (positif)\n— 1 cliente DRH a mentionné que le visuel \"Métro\" était \"fort mais dur\" (neutre/ambigu)\n— Decathlon : email de leur DRH reçu le 17 janvier, objet \"Retour sur campagne Lumio\" (transmis à Sonia)\n— Commentaires négatifs sur Instagram : 12 commentaires mentionnant \"stigmatisation\" / \"pas cool pour les gens qui souffrent vraiment\" — tous supprimés par modération le 15 janvier"
+          },
+          {
+            "type": "h3",
+            "text": "PUBLICATION LINKEDIN DU 14 JANVIER"
+          },
+          {
+            "type": "p",
+            "text": "J'ai publié un post LinkedIn partageant le cap des 4,2 millions d'impressions. Le post a été liké 87 fois en 6 heures et partagé 14 fois. Sonia m'a demandé de le retirer le 15 au matin — je l'ai laissé car il était déjà très engagé. Je le retire si confirmation explicite."
+          },
+          {
+            "type": "h3",
+            "text": "FIN DE RAPPORT"
+          }
+        ]
+      }
+    ]
+  }
+];
+  D.guide = {
+  "tips": [
+    {
+      "day": "Acte 1",
+      "title": "Exploration",
+      "body": "Reconstituer la chronologie des faits, identifier les 4 problèmes distincts",
+      "action": "Lire le mail de mission Sonia (Mail) · Lire le mail confidentiel de Théo (Mail) · Lire le brief initial Alter Scope (PDF)"
+    },
+    {
+      "day": "Acte 2",
+      "title": "Structuration",
+      "body": "Qualifier les risques, trier récupérable / non récupérable, envoyer hypothèse à Sonia",
+      "action": "Envoyer une première lecture à Sonia (Slack) · Remplir C.13 et C.14 dans le Livrable · Identifier les 3 acteurs responsables et leur part dans l'incident"
+    },
+    {
+      "day": "Acte 3",
+      "title": "Production",
+      "body": "Finaliser le rapport d'étape C.19, le plan de reprise C.14, commencer la note réflexive",
+      "action": "Finaliser C.19 — Rapport d'étape honnête (risques, responsabilités, chiffres) · Formaliser C.14 — Plan de reprise 7 jours (arrêts, ajustements, préservation) · Rédiger la Note réflexive E5"
+    }
+  ]
+};
+  D.portraits = [
+  {
+    "key": "theo_marczak",
+    "title": "Théo Marczak",
+    "file": "portraits/portrait_theo_marczak.html"
+  },
+  {
+    "key": "sonia_ferracci",
+    "title": "Sonia Ferracci",
+    "file": "portraits/portrait_sonia_ferracci.html"
+  },
+  {
+    "key": "camille_ott",
+    "title": "Camille Ott",
+    "file": "portraits/portrait_camille_ott.html"
+  },
+  {
+    "key": "jakob_rein",
+    "title": "Jakob Rein",
+    "file": "portraits/portrait_jakob_rein.html"
+  },
+  {
+    "key": "yassine_morel",
+    "title": "Yassine Morel",
+    "file": "portraits/portrait_yassine_morel.html"
+  }
+];
+  D.finder = D.finder || { folders: {}, order: [] };
+  D.finder.folders.portraits = {
+  "title": "Portraits",
+  "sidebar": "👥 Portraits",
+  "icon": "👥",
+  "items": [
+    {
+      "kind": "portrait",
+      "name": "Théo Marczak",
+      "app": "browser",
+      "props": {
+        "openPortrait": "theo_marczak"
+      }
+    },
+    {
+      "kind": "portrait",
+      "name": "Sonia Ferracci",
+      "app": "browser",
+      "props": {
+        "openPortrait": "sonia_ferracci"
+      }
+    },
+    {
+      "kind": "portrait",
+      "name": "Camille Ott",
+      "app": "browser",
+      "props": {
+        "openPortrait": "camille_ott"
+      }
+    },
+    {
+      "kind": "portrait",
+      "name": "Jakob Rein",
+      "app": "browser",
+      "props": {
+        "openPortrait": "jakob_rein"
+      }
+    },
+    {
+      "kind": "portrait",
+      "name": "Yassine Morel",
+      "app": "browser",
+      "props": {
+        "openPortrait": "yassine_morel"
+      }
+    }
+  ]
+};
+  if (D.finder.order.indexOf('portraits') === -1) {
+    var gIdx = D.finder.order.indexOf('guide');
+    D.finder.order.splice(gIdx >= 0 ? gIdx + 1 : 0, 0, 'portraits');
+  }
+})();
+// === [Chantier PDF+Browser] fin ===
