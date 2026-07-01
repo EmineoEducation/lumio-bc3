@@ -267,6 +267,30 @@ DRH — Decathlon France`
       { from: "Sonia Ferracci", time: "+20min", text: "Pour info : j'ai pris les décisions de dépassement de bonne foi, sur la base d'échanges informels avec Jakob (Northgate). Ce n'était pas de l'improvisation. Mais je comprends que ça ne suffit pas.", channel: "DM" },
     ]
   }
+,
+  finder: {
+    folders: {
+      guide: {
+        title: 'Guide de mission',
+        sidebar: '⌘ Guide',
+        icon: '📕',
+        items: [
+          { kind: 'mail', name: 'Brief de mission', app: 'mail', props: { openId: 'brief' } }
+        ]
+      },
+      espace: {
+        title: 'Espace de travail',
+        sidebar: 'Espace de travail',
+        icon: '📁',
+        items: [
+          { kind: 'mail', name: 'Boîte mail', app: 'mail', props: {} },
+          { kind: 'note', name: 'Notes', app: 'notes', props: {} },
+          { kind: 'audio', name: 'Mémos vocaux', app: 'voice', props: {} }
+        ]
+      }
+    },
+    order: ['guide', 'espace']
+  }
 };
 
 // ══════════════════════════════════════════════════════════════
