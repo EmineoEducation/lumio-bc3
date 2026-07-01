@@ -24,15 +24,17 @@ window.LUMIO_DATA = {
 
 Je te transmets les retours du jury interne sur la campagne. J'aurais préféré ne pas écrire ça par mail mais la situation ne peut plus attendre.
 
-Le claim "Votre corps parle avant vous" utilisé dans les visuels — le service juridique nous a alerté. Withings a déposé une phrase quasi-identique ("Your body speaks first") sur leur campagne UK en novembre. On est peut-être dans la zone de similarité. L'avocate demande une mise en retrait préventive des visuels d'ici vendredi.
+Le claim "Votre corps parle avant vous" utilisé dans les visuels — le service juridique nous a alerté. Withings a déposé une phrase quasi-identique ("Your body speaks first") sur leur campagne UK en novembre. On est peut-être dans la zone de similarité. L'avocate demande une mise en retrait préventive des visuels d'ici vendredi. Elle m'a aussi signalé qu'un dépôt tardif de notre côté, si on décide de le faire, ne nous protégerait plus grand-chose à ce stade — la fenêtre était avant le lancement, pas après.
 
-D'autre part : la photo utilisée dans le visuel "Metro" — la femme en surmenage, regard vide, cercles noirs sous les yeux. L'équipe RH de Decathlon (client) nous a écrit ce matin. Leur DRH trouve que ça "stigmatise les personnes en souffrance au travail" et que ça contredit leur charte bien-être. Ils ont évoqué "remise en question du contrat". C'est 147 000 € de chiffre annuel.
+D'autre part : la photo utilisée dans le visuel "Metro" — la femme en surmenage, regard vide, cercles noirs sous les yeux. L'équipe RH de Decathlon (client) nous a écrit ce matin. Leur DRH trouve que ça "stigmatise les personnes en souffrance au travail" et que ça contredit leur charte bien-être. Ils ont évoqué "remise en question du contrat". C'est 147 000 € de chiffre annuel — et surtout notre client B2B le plus ancien, celui qu'on cite dans nos études de cas depuis trois ans.
 
-Troisième point : le post LinkedIn de Yassine du 14 janvier avec les résultats intermédiaires. Il a publié "Lumio touche 4,2 millions d'impressions" avant validation de notre côté. Les chiffres sont probablement corrects mais on n'avait pas validé la communication externe. Northgate a vu. Jakob m'a appelé pour demander si on avait changé notre politique de communication.
+Troisième point : le post LinkedIn de Yassine du 14 janvier avec les résultats intermédiaires. Il a publié "Lumio touche 4,2 millions d'impressions" avant validation de notre côté. Les chiffres sont probablement corrects mais on n'avait pas validé la communication externe. Northgate a vu. Jakob m'a appelé pour demander si on avait changé notre politique de communication — je lui ai dit que non, que c'était un cas isolé, mais je n'en suis plus totalement sûr moi-même.
 
-Le budget : Sonia, on est à 312 000 € engagés sur 200 000 € autorisés. Je sais que le board avait informellement évoqué une rallonge possible, mais elle n'a pas été votée. On ne peut pas continuer comme ça.
+Le budget : Sonia, on est à 312 000 € engagés sur 200 000 € autorisés. Je sais que le board avait informellement évoqué une rallonge possible, mais elle n'a pas été votée. Un board qui évoque quelque chose n'a jamais engagé l'entreprise à quoi que ce soit — tu le sais aussi bien que moi. On ne peut pas continuer comme ça.
 
-Il faut qu'on parle demain matin. Et il faut que {{PRENOM}} produise un rapport d'étape avant la fin de semaine — je dois présenter une situation honnête au board lundi.
+Ce qui m'inquiète le plus, ce n'est pas un de ces quatre points isolément — c'est qu'ils remontent tous la même semaine, et que je découvre chacun d'eux après qu'il se soit produit, jamais avant.
+
+Il faut qu'on parle demain matin. Et il faut que {{PRENOM}} produise un rapport d'étape avant la fin de semaine — je dois présenter une situation honnête au board lundi, pas une version arrangée.
 
 T.`
   },
@@ -55,15 +57,17 @@ Les faits bruts :
 — Le visuel "Metro" (femme en surmenage, regard vide) a choqué un client B2B clé — Decathlon — qui parle de rupture de contrat.
 — Yassine (notre content manager) a publié des résultats intermédiaires sans validation préalable. Le fonds a réagi.
 
+Ce qui rend la situation plus difficile encore : ces quatre points sont arrivés presque simultanément, sur une semaine, alors qu'individuellement chacun aurait été gérable avec un peu de recul. Je n'ai pas eu ce recul. J'ai géré chaque décision dans l'instant, sans jamais reprendre l'ensemble à froid — et c'est très exactement le regard que je te demande d'apporter.
+
 Il me faut deux choses d'ici vendredi 17h :
 
 1. Un rapport d'étape honnête — pas un document de défense, un diagnostic. Ce qui s'est passé, pourquoi, et ce que ça implique comme risques.
 
 2. Un plan de reprise — ce qu'on fait dans les 7 jours, ce qu'on arrête, ce qu'on préserve de la campagne.
 
-Théo doit présenter au board lundi matin. Il a besoin d'une lecture externe, pas de la mienne.
+Théo doit présenter au board lundi matin. Il a besoin d'une lecture externe, pas de la mienne. Je précise que je ne te demande pas de m'épargner dans ce rapport — si ma part de responsabilité doit être nommée, elle doit l'être clairement, sinon le document ne servira à rien face à Théo.
 
-Tout est dans ton espace. Prends le mail de Théo (transmis ce soir), le brief initial d'Alter Scope, les résultats de suivi envoyés par Yassine, et la réaction de Decathlon.
+Tout est dans ton espace. Prends le mail de Théo (transmis ce soir), le brief initial d'Alter Scope, les résultats de suivi envoyés par Yassine, et la réaction de Decathlon. Écoute aussi Camille si tu en as l'occasion — elle est en première ligne côté clients et voit des choses que je ne vois pas depuis mon bureau.
 
 Tu peux me poser des questions sur Slack. Je répondrai entre les réunions.
 
@@ -82,9 +86,11 @@ Directrice Marketing — Lumio Health`
       lede: "Plusieurs annonceurs ont dû retirer des campagnes de santé mentale après des accusations de « poverty porn émotionnel ». Le sujet est devenu un terrain miné.",
       body: `La représentation de la souffrance au travail dans les campagnes de communication suscite une vigilance croissante de la part des associations de patients et des syndicats. « Montrer quelqu'un de "cassé" pour vendre un outil de prévention, c'est se servir de la détresse comme argument commercial. C'est un problème éthique, pas juste esthétique », estime la présidente de l'association SantéPsy Pro.
 
-Plusieurs grandes marques ont essuyé des critiques similaires ces 18 derniers mois. La dernière en date, une campagne d'une mutuelle santé montrant un salarié en larmes dans les toilettes, a été retirée après trois jours suite à un appel au boycott sur X/Twitter.
+Plusieurs grandes marques ont essuyé des critiques similaires ces 18 derniers mois. La dernière en date, une campagne d'une mutuelle santé montrant un salarié en larmes dans les toilettes, a été retirée après trois jours suite à un appel au boycott sur X/Twitter. Une autre, dans le secteur des assurances, avait dû publier un communiqué d'excuses après que des patients concernés par la dépression eurent qualifié le visuel de "spectacle de la souffrance des autres".
 
-Les experts en communication conseillent désormais de systématiquement tester les visuels de souffrance psychologique sur des panels incluant des personnes concernées, avant tout déploiement. « Le jury de votre agence, même bien intentionné, n'est pas représentatif des personnes qui vivent ces situations », rappelle Olivia Stern, directrice de l'AACC.`
+Le point commun de ces controverses, selon plusieurs experts interrogés, est presque toujours le même : le visuel a été validé par des équipes marketing et créatives, jamais par des personnes directement concernées par le sujet représenté. « On demande à des gens qui n'ont jamais vécu un burn-out de juger si une image de burn-out est acceptable. Le jugement esthétique et le jugement éthique sont deux choses différentes », note un consultant en communication santé cité dans l'article.
+
+Les experts en communication conseillent désormais de systématiquement tester les visuels de souffrance psychologique sur des panels incluant des personnes concernées, avant tout déploiement. « Le jury de votre agence, même bien intentionné, n'est pas représentatif des personnes qui vivent ces situations », rappelle Olivia Stern, directrice de l'AACC. Elle recommande également de prévoir, en amont de tout brief créatif abordant la santé mentale, une checklist RSE validée conjointement par l'annonceur et l'agence — une pratique qu'elle estime "encore minoritaire, alors qu'elle devrait être un standard".`
     },
     {
       url: "cb-news.fr/propriete-intellectuelle-claim-publicite-risques",
@@ -93,11 +99,13 @@ Les experts en communication conseillent désormais de systématiquement tester 
       author: "par Sarah Duval",
       headline: "Droits des claims publicitaires : une zone grise que peu d'annonceurs maîtrisent",
       lede: "La protection d'un slogan publicitaire est plus complexe qu'il n'y paraît — et les similitudes non intentionnelles peuvent coûter très cher.",
-      body: `Contrairement aux marques déposées, un slogan publicitaire n'est protégé que s'il répond à des critères stricts de distinctivité. Mais la zone grise des « similitudes frappantes » a donné lieu à des litiges coûteux.
+      body: `Contrairement aux marques déposées, un slogan publicitaire n'est protégé que s'il répond à des critères stricts de distinctivité. Mais la zone grise des « similitudes frappantes » a donné lieu à des litiges coûteux, notamment lorsque deux marques opèrent sur le même secteur avec des cibles proches — ce qui aggrave le risque de confusion aux yeux d'un juge.
 
-« Le test ne porte pas uniquement sur la formulation exacte, mais sur l'impression d'ensemble laissée par le claim — son rythme, sa structure, sa résonance sémantique », explique Maître Aurélie Bentz, avocate spécialisée en propriété intellectuelle.
+« Le test ne porte pas uniquement sur la formulation exacte, mais sur l'impression d'ensemble laissée par le claim — son rythme, sa structure, sa résonance sémantique », explique Maître Aurélie Bentz, avocate spécialisée en propriété intellectuelle. Elle cite l'exemple d'un litige tranché en 2024 entre deux marques de cosmétiques dont les slogans, bien que composés de mots différents, ont été jugés "confusants dans l'esprit du consommateur moyen".
 
-La solution la plus sûre reste le clearance systématique avant lancement : une recherche documentaire sur les claims similaires déposés dans votre secteur et dans les pays cibles. Coût estimé : entre 800 € et 3 000 € selon le périmètre. Coût d'un litige non anticipé : bien davantage.`
+La difficulté principale, selon elle, est temporelle : la plupart des annonceurs ne pensent à vérifier l'antériorité d'un claim qu'après la validation créative, alors que c'est précisément à ce stade qu'un changement de direction coûte le moins cher. Une fois le claim intégré aux visuels, au plan média et parfois déjà diffusé, le coût d'un changement de dernière minute peut dépasser largement celui d'une vérification en amont.
+
+La solution la plus sûre reste le clearance systématique avant lancement : une recherche documentaire sur les claims similaires déposés dans votre secteur et dans les pays cibles, y compris hors Union européenne si la marque concurrente y est active. Coût estimé : entre 800 € et 3 000 € selon le périmètre. Coût d'un litige non anticipé : bien davantage — sans compter le temps de retrait et de refonte des supports déjà produits.`
     },
     {
       url: "maddyness.com/startup/communication-resultat-intermediaire-fuite",
@@ -106,11 +114,13 @@ La solution la plus sûre reste le clearance systématique avant lancement : une
       author: "par Hugo Verdier",
       headline: "Résultats partiels publiés trop tôt : le piège des communications prématurées",
       lede: "Plusieurs startups ont appris à leurs dépens que publier des métriques intermédiaires sans validation interne pouvait créer des attentes impossibles à tenir.",
-      body: `« J'avais juste voulu partager une bonne nouvelle en interne. En deux heures, c'était sur LinkedIn et les investisseurs appelaient », raconte un directeur marketing d'une scale-up française. La situation est devenue un classique de la com startup : l'enthousiasme dépasse les process.
+      body: `« J'avais juste voulu partager une bonne nouvelle en interne. En deux heures, c'était sur LinkedIn et les investisseurs appelaient », raconte un directeur marketing d'une scale-up française, sous couvert d'anonymat. La situation est devenue un classique de la com startup : l'enthousiasme dépasse les process, souvent porté par des équipes jeunes et engagées qui vivent chaque bon chiffre comme une victoire collective à célébrer immédiatement.
 
-Le problème n'est pas seulement réputationnel. Dans un contexte où des fonds d'investissement suivent activement les communications publiques de leurs participations, une donnée non validée peut créer des engagements implicites, voire des obligations d'information.
+Le problème n'est pas seulement réputationnel. Dans un contexte où des fonds d'investissement suivent activement les communications publiques de leurs participations, une donnée non validée peut créer des engagements implicites, voire des obligations d'information vis-à-vis d'autres investisseurs ou partenaires qui auraient pu se fier à ce chiffre pour prendre une décision.
 
-Les experts recommandent un protocole simple : toute donnée de performance publiée, même en interne sur un canal semi-ouvert comme LinkedIn, doit avoir fait l'objet d'une validation marketing et juridique préalable. « Sur LinkedIn, la frontière entre "interne" et "public" n'existe pas », résume Léa Fontaine, consultante en communication digitale.`
+Certains fonds vont plus loin et intègrent désormais une clause de "communication publique" dans leurs pactes d'actionnaires, obligeant les startups financées à faire valider par le board toute communication chiffrée avant diffusion externe — même sur les réseaux sociaux professionnels. Une pratique encore rare mais en progression, selon plusieurs avocats d'affaires interrogés.
+
+Les experts recommandent un protocole simple : toute donnée de performance publiée, même en interne sur un canal semi-ouvert comme LinkedIn, doit avoir fait l'objet d'une validation marketing et juridique préalable. « Sur LinkedIn, la frontière entre "interne" et "public" n'existe pas », résume Léa Fontaine, consultante en communication digitale. Elle ajoute qu'un chiffre isolé, même correct, peut être mal interprété hors de son contexte complet — un problème qui touche particulièrement les startups en phase de levée de fonds, où chaque donnée est scrutée par des investisseurs potentiels.`
     }
   ],
 
@@ -124,6 +134,8 @@ Les experts recommandent un protocole simple : toute donnée de performance publ
 
 Lumio Health relance sa communication suite au repositionnement « santé invisible » validé en septembre 2026. L'objectif est de faire connaître la marque auprès d'une cible B2B (DRH, médecins du travail) et d'amorcer une présence B2C (actifs urbains 30-50 ans).
 
+Le contexte concurrentiel a pesé dans le choix du calendrier : deux acteurs du secteur (Biostream, Neuroflow) ont annoncé des levées de fonds cet automne et préparent leurs propres campagnes de notoriété pour le premier trimestre 2027. Lumio veut occuper le terrain en premier.
+
 Budget validé : 200 000 € (enveloppe annuelle)
 Répartition indicative : 35% prod créa, 40% médias, 25% activation événementielle
 
@@ -131,13 +143,19 @@ INSIGHT CENTRAL
 
 Le stress chronique est un fantôme — présent partout, visible nulle part. Les gens le ressentent mais ne le voient pas. Les médecins ne l'objectivent pas. Les DRH ne savent pas le mesurer. Lumio rend le fantôme visible.
 
+Étude qualitative préalable (12 entretiens DRH, réalisée par Alter Scope en septembre) : la moitié des DRH interrogés reconnaissent avoir "au moins un collaborateur en surmenage visible sans jamais avoir formalisé de diagnostic". C'est le point de départ créatif de la campagne.
+
 TERRITOIRE CRÉATIF
 
 « Fantôme de Soi » — la version de soi que le stress chronique efface progressivement. La campagne montre des moments du quotidien où quelqu'un est là physiquement mais absent mentalement : en réunion, dans le métro, au dîner en famille.
 
+Le parti pris créatif consiste à ne jamais nommer directement la souffrance — le sujet se lit dans le regard, la posture, le flou du décor autour du personnage, jamais dans un texte explicatif. Alter Scope revendique une approche "cinématographique plutôt que publicitaire".
+
 CLAIM PRINCIPAL
 
 « Votre corps parle avant vous. »
+
+Trois variantes ont été testées en interne avant validation : "Le corps sait avant la tête", "Ce que votre corps dit déjà" et la version retenue. Le choix s'est fait sur le critère de mémorisation (test de rappel à 24h, panel interne Alter Scope de 40 personnes).
 
 DÉCLINAISONS VISUELLES (validées par Sonia Ferracci — réunion du 18 octobre)
 
@@ -154,9 +172,10 @@ Digital B2C : Instagram, YouTube pre-roll
 
 NOTES
 
-— Le visuel "Métro" est le plus impactant selon les tests internes Alter Scope (recall +34%)
+— Le visuel "Métro" est le plus impactant selon les tests internes Alter Scope (recall +34%) — c'est aussi celui qui a suscité le plus de débat en interne chez Alter Scope avant validation, deux créatifs junior ayant exprimé des réserves sur le traitement visuel de la fatigue psychologique, réserves non formalisées par écrit.
 — Validation juridique du claim : en cours au moment du brief / à boucler avant lancement
 — Décision de lancement anticipé prise par Sonia Ferracci le 2 novembre en accord avec Yassine Morel (décalage de la validation juridique pour tenir le planning)
+— Aucun critère RSE ni clause de vérification éthique des visuels n'a été intégré dans le cahier des charges transmis à Alter Scope — l'agence a travaillé sur la seule base de l'insight créatif et du calendrier.
 
 CALENDRIER
 
@@ -181,6 +200,17 @@ Résultats globaux au 14 janvier 2027 :
 — Taux d'engagement LinkedIn : 2,1% (objectif : 1,5%) → au-dessus objectif ✓
 — Couverture affichage Paris/Lyon : 89% des panneaux commandés déployés ✓
 — Leads DRH entrants via campagne : 23 (objectif mensuel : 15) ✓
+— Pré-inscriptions stand Préventica (mars) : 41 (objectif : 30) ✓
+
+DÉTAIL PAR CANAL
+
+LinkedIn Sponsored (visuel "Réunion") : 1 100 000 impressions, CTR 0,9% (bon pour le secteur B2B RH), 340 clics vers la landing page dédiée. C'est le canal qui génère le plus de leads qualifiés — 18 des 23 leads DRH viennent de ce format.
+
+Affichage Paris/Lyon (visuel "Métro") : 2 400 000 contacts estimés (base Médiamétrie affichage), 8 emplacements sur 9 commandés effectivement posés (1 emplacement gare Part-Dieu retardé pour raison technique, posé le 20 janvier). C'est le visuel qui concentre l'essentiel des remontées négatives.
+
+Instagram + YouTube pre-roll (ajout tardif) : 700 000 impressions, taux de complétion pre-roll 61% (au-dessus de la moyenne secteur santé, généralement 45-50%).
+
+Newsletter RH partenaires : diffusée à 3 reprises (semaines 47, 49, 2), taux d'ouverture moyen 34%, taux de clic 6,2%.
 
 RÉPARTITION BUDGÉTAIRE AU 14 JANVIER
 
@@ -193,11 +223,13 @@ RÉPARTITION BUDGÉTAIRE AU 14 JANVIER
 
 NOTE SUR L'ÉVOLUTION BUDGÉTAIRE
 
-Les dépassements sont liés à trois décisions prises en cours de campagne :
-1. Ajout d'un format YouTube pre-roll (décision Sonia, 3 nov.) : +22 000 €
-2. Extension affichage Lyon (décision Sonia, 15 nov.) : +11 200 €
-3. Inscription Préventica (décision Sonia + Yassine, 1 déc.) : +19 400 €
-4. Surcoût production retouches visuelles suite retours Alter Scope (partagé) : +19 400 €
+Les dépassements sont liés à quatre décisions prises en cours de campagne :
+1. Ajout d'un format YouTube pre-roll (décision Sonia, 3 nov.) : +22 000 € — justifié à l'époque par des performances Instagram organique jugées prometteuses en test.
+2. Extension affichage Lyon (décision Sonia, 15 nov.) : +11 200 € — Lyon n'était pas dans le brief initial, ajouté après un retour positif du réseau Camille sur ce bassin d'emploi tertiaire.
+3. Inscription Préventica (décision Sonia + Yassine, 1 déc.) : +19 400 € — stand + logistique + supports, décidé pour capitaliser sur la dynamique de la campagne alors jugée positive.
+4. Surcoût production retouches visuelles suite retours Alter Scope (partagé) : +19 400 € — trois rounds de retouches sur le visuel "Métro" avant validation finale, chacun facturé en supplément par l'agence.
+
+Aucune de ces quatre décisions n'a fait l'objet d'un arbitrage budgétaire formel avec Théo. Chacune, prise isolément, semblait mineure (entre 11K€ et 22K€) — c'est leur cumul qui a produit l'écart de 112 000 €.
 
 SIGNAUX ENTRANTS
 
@@ -205,10 +237,11 @@ SIGNAUX ENTRANTS
 — 1 cliente DRH a mentionné que le visuel "Métro" était "fort mais dur" (neutre/ambigu)
 — Decathlon : email de leur DRH reçu le 17 janvier, objet "Retour sur campagne Lumio" (transmis à Sonia)
 — Commentaires négatifs sur Instagram : 12 commentaires mentionnant "stigmatisation" / "pas cool pour les gens qui souffrent vraiment" — tous supprimés par modération le 15 janvier
+— Un compte associatif (SantéPsy Pro, cité dans la presse spécialisée) a partagé une capture du visuel "Métro" avec un commentaire critique, 340 vues, pas encore viral mais surveillé
 
 PUBLICATION LINKEDIN DU 14 JANVIER
 
-J'ai publié un post LinkedIn partageant le cap des 4,2 millions d'impressions. Le post a été liké 87 fois en 6 heures et partagé 14 fois. Sonia m'a demandé de le retirer le 15 au matin — je l'ai laissé car il était déjà très engagé. Je le retire si confirmation explicite.
+J'ai publié un post LinkedIn partageant le cap des 4,2 millions d'impressions. Le post a été liké 87 fois en 6 heures et partagé 14 fois, dont un partage par un analyste sectoriel suivi par plusieurs profils Northgate Capital. Sonia m'a demandé de le retirer le 15 au matin — je l'ai laissé car il était déjà très engagé et je craignais qu'un retrait soudain attire davantage l'attention que le post lui-même. Je le retire si confirmation explicite.
 
 FIN DE RAPPORT`
   },
@@ -224,13 +257,13 @@ FIN DE RAPPORT`
 
 Je me permets de vous écrire directement car nous avons une relation de confiance depuis trois ans et je préfère vous le dire avant que ça ne remonte par d'autres canaux.
 
-Votre campagne actuelle — et notamment le visuel que j'ai vu en affichage gare de Lyon ce mardi — nous a posé un problème au sein de notre équipe RH. La représentation de la femme visiblement épuisée, avec les cernes marqués et le regard vide, a été perçue comme une forme de stigmatisation de la dépression ou du burn-out.
+Votre campagne actuelle — et notamment le visuel que j'ai vu en affichage gare de Lyon ce mardi — nous a posé un problème au sein de notre équipe RH. La représentation de la femme visiblement épuisée, avec les cernes marqués et le regard vide, a été perçue comme une forme de stigmatisation de la dépression ou du burn-out. Deux membres de mon équipe m'en ont parlé spontanément avant même que je l'aie vu moi-même, ce qui m'indique que le sujet circule déjà en interne chez nous.
 
-Notre charte bien-être salarié, que nous avons justement construite avec l'aide de votre solution Lumio ces deux dernières années, insiste précisément sur la représentation positive et non stigmatisante de la santé mentale au travail. Ce visuel entre en contradiction directe avec ce que nous défendons en interne.
+Notre charte bien-être salarié, que nous avons justement construite avec l'aide de votre solution Lumio ces deux dernières années, insiste précisément sur la représentation positive et non stigmatisante de la santé mentale au travail. Ce visuel entre en contradiction directe avec ce que nous défendons en interne — et, je vous le dis franchement, ça place notre propre équipe RH dans une position délicate : nous ne pouvons pas continuer à citer Lumio en exemple de bonne pratique sur le stress au travail si votre propre communication grand public en donne une image aussi dure.
 
-Je ne fais pas de mise en demeure. Mais je dois vous dire que si ce visuel reste diffusé, cela va rendre très difficile le renouvellement de notre contrat en mars, que nous devons justifier devant notre comité RSE interne.
+Je ne fais pas de mise en demeure. Mais je dois vous dire que si ce visuel reste diffusé, cela va rendre très difficile le renouvellement de notre contrat en mars, que nous devons justifier devant notre comité RSE interne — comité qui, je le précise, examine désormais systématiquement la cohérence de nos prestataires avec nos propres engagements, pas seulement leurs produits.
 
-Je reste disponible pour en parler.
+Je reste disponible pour en parler, avec vous ou avec toute personne de votre équipe en charge du dossier.
 
 Cordialement,
 Hélène Marchand
@@ -242,17 +275,25 @@ DRH — Decathlon France`
     {
       duration: "01:28",
       title: "Sur l'ambiance client depuis la campagne",
-      transcript: `Depuis que la campagne a commencé à tourner, j'ai des retours étranges de mes clients. Pas négatifs en façade — mais étranges. Des DRH qui me posent des questions sur "l'approche éthique" de Lumio, qui me demandent si on a consulté des associations. L'un d'eux m'a dit "j'aime bien votre produit mais votre pub est un peu dure". Je pense qu'on a surestimé notre capacité à aller sur le terrain de la souffrance visible. Notre force depuis huit ans, c'était justement de ne pas stigmatiser — de parler de prévention, de données, d'anticipation. Là on est allés sur l'image de la personne cassée et ça crée une dissonance.`
+      transcript: `Depuis que la campagne a commencé à tourner, j'ai des retours étranges de mes clients. Pas négatifs en façade — mais étranges. Des DRH qui me posent des questions sur "l'approche éthique" de Lumio, qui me demandent si on a consulté des associations. L'un d'eux m'a dit "j'aime bien votre produit mais votre pub est un peu dure". Je pense qu'on a surestimé notre capacité à aller sur le terrain de la souffrance visible. Notre force depuis huit ans, c'était justement de ne pas stigmatiser — de parler de prévention, de données, d'anticipation. Là on est allés sur l'image de la personne cassée et ça crée une dissonance.
+
+Ce qui m'inquiète le plus, honnêtement, c'est pas un client en particulier — c'est le pattern. J'ai eu quatre échanges de ce type en dix jours, avec quatre clients différents, dans quatre secteurs différents. Quand c'est un cas isolé, je me dis que c'est une sensibilité personnelle. Quand c'est un pattern qui traverse plusieurs comptes, je me dis qu'on a raté quelque chose au niveau du message, pas juste au niveau d'une réaction individuelle. Et honnêtement je ne sais pas encore comment en parler à Sonia sans que ça ait l'air d'une attaque contre son travail — parce que ce n'est pas ça, c'est juste un signal terrain qu'elle n'a pas.`
     },
     {
       duration: "01:05",
       title: "Sur le dépassement budgétaire",
-      transcript: `Je ne savais pas qu'on était à 312 000 €. Vraiment. Théo ne nous informe pas sur les budgets en temps réel et Sonia n'en parle pas en réunion commerciale. Je l'ai appris hier soir par le mail de Théo. Ce qui m'inquiète c'est pas le montant en lui-même — c'est que si le fonds coupe les vivres maintenant, on annule Préventica et on perd notre seule fenêtre de contact physique avec les DRH dans les 6 prochains mois. C'est le pire timing possible.`
+      transcript: `Je ne savais pas qu'on était à 312 000 €. Vraiment. Théo ne nous informe pas sur les budgets en temps réel et Sonia n'en parle pas en réunion commerciale. Je l'ai appris hier soir par le mail de Théo. Ce qui m'inquiète c'est pas le montant en lui-même — c'est que si le fonds coupe les vivres maintenant, on annule Préventica et on perd notre seule fenêtre de contact physique avec les DRH dans les 6 prochains mois. C'est le pire timing possible.
+
+Il faut aussi que je dise une chose, même si c'est pas facile à dire à voix haute : moi-même j'avais un doute sur l'extension Lyon quand Sonia m'en a parlé en novembre. Je lui ai dit que le réseau tertiaire lyonnais réagissait bien, ce qui est vrai, mais je n'ai jamais dit "vas-y, dépasse le budget". J'ai juste donné une info terrain positive, et cette info a servi à justifier une décision que je n'avais pas à valider. Je ne sais pas si c'est important pour le rapport, mais je préfère que ce soit dit une fois plutôt que ça reste flou.`
     },
     {
       duration: "01:47",
       title: "Ce que je conseillerais si on me demandait",
-      transcript: `Si j'étais à la place de {{PRENOM}} — et j'ai pas cette responsabilité, c'est clair — ce que je ferais c'est distinguer ce qui est récupérable de ce qui ne l'est pas. Le claim juridique, on peut le changer. Le visuel "Métro", on peut le sortir de la rotation. Le budget dépassé, on peut l'expliquer si on présente un plan d'arrêt crédible. Ce qui est pas récupérable facilement, c'est la confiance de Théo vis-à-vis de Sonia. Et ça, c'est pas dans le rapport d'étape — c'est dans la tête de tout le monde. La question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c'est juste pour protéger Sonia, ça va pas tenir. Il faut que ce soit un vrai diagnostic.`
+      transcript: `Si j'étais à la place de {{PRENOM}} — et j'ai pas cette responsabilité, c'est clair — ce que je ferais c'est distinguer ce qui est récupérable de ce qui ne l'est pas. Le claim juridique, on peut le changer. Le visuel "Métro", on peut le sortir de la rotation. Le budget dépassé, on peut l'expliquer si on présente un plan d'arrêt crédible. Ce qui est pas récupérable facilement, c'est la confiance de Théo vis-à-vis de Sonia. Et ça, c'est pas dans le rapport d'étape — c'est dans la tête de tout le monde.
+
+Il y a aussi un truc que je remarque depuis huit ans que je fais ce métier chez Lumio : à chaque fois qu'une crise éclate, tout le monde veut d'abord savoir qui est responsable, avant même de savoir ce qu'on va faire. C'est humain, mais c'est contre-productif. Si {{PRENOM}} arrive avec un rapport qui commence par "qui a fait quoi", Théo va lire ça comme un procès contre Sonia, et Sonia va se braquer avant même d'avoir lu le plan de reprise. Il faut inverser l'ordre : d'abord ce qu'on fait dans les 7 jours, ensuite ce qui explique pourquoi c'est arrivé — jamais l'inverse.
+
+La question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c'est juste pour protéger Sonia, ça va pas tenir. Il faut que ce soit un vrai diagnostic. Et honnêtement, un vrai diagnostic protège aussi Sonia mieux qu'un rapport complaisant — parce que Théo saura reconnaître qu'on lui a dit la vérité, même une vérité inconfortable.`
     }
   ],
 
@@ -459,9 +500,7 @@ window.PASS_CONFIG = {
 // === [PAC v2 complétion] fin ===
 
 
-// === [Chantier PDF+Browser] dossiers/guide/portraits — 02/07/2026 ===
-// Restructuration de D.alterScopeBrief + D.yassineReport (déjà écrits) en D.dossiers[]. Guide construit depuis PAC_CONFIG.temps[].objectif/todoSuggere (déjà écrits).
-// Aucun contenu narratif nouveau : uniquement restructuration + câblage.
+// === [Chantier PDF+Browser] dossiers/guide/portraits — régénéré 01/07/2026 après densification narrative ===
 (function() {
   var D = window.LUMIO_DATA;
   if (!D) return;
@@ -488,6 +527,10 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
+            "text": "Le contexte concurrentiel a pesé dans le choix du calendrier : deux acteurs du secteur (Biostream, Neuroflow) ont annoncé des levées de fonds cet automne et préparent leurs propres campagnes de notoriété pour le premier trimestre 2027. Lumio veut occuper le terrain en premier."
+          },
+          {
+            "type": "p",
             "text": "Budget validé : 200 000 € (enveloppe annuelle)\nRépartition indicative : 35% prod créa, 40% médias, 25% activation événementielle"
           },
           {
@@ -499,6 +542,10 @@ window.PASS_CONFIG = {
             "text": "Le stress chronique est un fantôme — présent partout, visible nulle part. Les gens le ressentent mais ne le voient pas. Les médecins ne l'objectivent pas. Les DRH ne savent pas le mesurer. Lumio rend le fantôme visible."
           },
           {
+            "type": "p",
+            "text": "Étude qualitative préalable (12 entretiens DRH, réalisée par Alter Scope en septembre) : la moitié des DRH interrogés reconnaissent avoir \"au moins un collaborateur en surmenage visible sans jamais avoir formalisé de diagnostic\". C'est le point de départ créatif de la campagne."
+          },
+          {
             "type": "h3",
             "text": "TERRITOIRE CRÉATIF"
           },
@@ -507,12 +554,20 @@ window.PASS_CONFIG = {
             "text": "« Fantôme de Soi » — la version de soi que le stress chronique efface progressivement. La campagne montre des moments du quotidien où quelqu'un est là physiquement mais absent mentalement : en réunion, dans le métro, au dîner en famille."
           },
           {
+            "type": "p",
+            "text": "Le parti pris créatif consiste à ne jamais nommer directement la souffrance — le sujet se lit dans le regard, la posture, le flou du décor autour du personnage, jamais dans un texte explicatif. Alter Scope revendique une approche \"cinématographique plutôt que publicitaire\"."
+          },
+          {
             "type": "h3",
             "text": "CLAIM PRINCIPAL"
           },
           {
             "type": "p",
             "text": "« Votre corps parle avant vous. »"
+          },
+          {
+            "type": "p",
+            "text": "Trois variantes ont été testées en interne avant validation : \"Le corps sait avant la tête\", \"Ce que votre corps dit déjà\" et la version retenue. Le choix s'est fait sur le critère de mémorisation (test de rappel à 24h, panel interne Alter Scope de 40 personnes)."
           },
           {
             "type": "h3",
@@ -536,7 +591,7 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
-            "text": "— Le visuel \"Métro\" est le plus impactant selon les tests internes Alter Scope (recall +34%)\n— Validation juridique du claim : en cours au moment du brief / à boucler avant lancement\n— Décision de lancement anticipé prise par Sonia Ferracci le 2 novembre en accord avec Yassine Morel (décalage de la validation juridique pour tenir le planning)"
+            "text": "— Le visuel \"Métro\" est le plus impactant selon les tests internes Alter Scope (recall +34%) — c'est aussi celui qui a suscité le plus de débat en interne chez Alter Scope avant validation, deux créatifs junior ayant exprimé des réserves sur le traitement visuel de la fatigue psychologique, réserves non formalisées par écrit.\n— Validation juridique du claim : en cours au moment du brief / à boucler avant lancement\n— Décision de lancement anticipé prise par Sonia Ferracci le 2 novembre en accord avec Yassine Morel (décalage de la validation juridique pour tenir le planning)\n— Aucun critère RSE ni clause de vérification éthique des visuels n'a été intégré dans le cahier des charges transmis à Alter Scope — l'agence a travaillé sur la seule base de l'insight créatif et du calendrier."
           },
           {
             "type": "h3",
@@ -568,7 +623,27 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
-            "text": "Résultats globaux au 14 janvier 2027 :\n— Impressions totales : 4 200 000 (Display + Affichage + LinkedIn + Instagram)\n— CPM Display B2B : 14,20 €/mille (objectif : 12 €) → dépassement +18%\n— Taux d'engagement LinkedIn : 2,1% (objectif : 1,5%) → au-dessus objectif ✓\n— Couverture affichage Paris/Lyon : 89% des panneaux commandés déployés ✓\n— Leads DRH entrants via campagne : 23 (objectif mensuel : 15) ✓"
+            "text": "Résultats globaux au 14 janvier 2027 :\n— Impressions totales : 4 200 000 (Display + Affichage + LinkedIn + Instagram)\n— CPM Display B2B : 14,20 €/mille (objectif : 12 €) → dépassement +18%\n— Taux d'engagement LinkedIn : 2,1% (objectif : 1,5%) → au-dessus objectif ✓\n— Couverture affichage Paris/Lyon : 89% des panneaux commandés déployés ✓\n— Leads DRH entrants via campagne : 23 (objectif mensuel : 15) ✓\n— Pré-inscriptions stand Préventica (mars) : 41 (objectif : 30) ✓"
+          },
+          {
+            "type": "h3",
+            "text": "DÉTAIL PAR CANAL"
+          },
+          {
+            "type": "p",
+            "text": "LinkedIn Sponsored (visuel \"Réunion\") : 1 100 000 impressions, CTR 0,9% (bon pour le secteur B2B RH), 340 clics vers la landing page dédiée. C'est le canal qui génère le plus de leads qualifiés — 18 des 23 leads DRH viennent de ce format."
+          },
+          {
+            "type": "p",
+            "text": "Affichage Paris/Lyon (visuel \"Métro\") : 2 400 000 contacts estimés (base Médiamétrie affichage), 8 emplacements sur 9 commandés effectivement posés (1 emplacement gare Part-Dieu retardé pour raison technique, posé le 20 janvier). C'est le visuel qui concentre l'essentiel des remontées négatives."
+          },
+          {
+            "type": "p",
+            "text": "Instagram + YouTube pre-roll (ajout tardif) : 700 000 impressions, taux de complétion pre-roll 61% (au-dessus de la moyenne secteur santé, généralement 45-50%)."
+          },
+          {
+            "type": "p",
+            "text": "Newsletter RH partenaires : diffusée à 3 reprises (semaines 47, 49, 2), taux d'ouverture moyen 34%, taux de clic 6,2%."
           },
           {
             "type": "h3",
@@ -584,7 +659,11 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
-            "text": "Les dépassements sont liés à trois décisions prises en cours de campagne :\n1. Ajout d'un format YouTube pre-roll (décision Sonia, 3 nov.) : +22 000 €\n2. Extension affichage Lyon (décision Sonia, 15 nov.) : +11 200 €\n3. Inscription Préventica (décision Sonia + Yassine, 1 déc.) : +19 400 €\n4. Surcoût production retouches visuelles suite retours Alter Scope (partagé) : +19 400 €"
+            "text": "Les dépassements sont liés à quatre décisions prises en cours de campagne :\n1. Ajout d'un format YouTube pre-roll (décision Sonia, 3 nov.) : +22 000 € — justifié à l'époque par des performances Instagram organique jugées prometteuses en test.\n2. Extension affichage Lyon (décision Sonia, 15 nov.) : +11 200 € — Lyon n'était pas dans le brief initial, ajouté après un retour positif du réseau Camille sur ce bassin d'emploi tertiaire.\n3. Inscription Préventica (décision Sonia + Yassine, 1 déc.) : +19 400 € — stand + logistique + supports, décidé pour capitaliser sur la dynamique de la campagne alors jugée positive.\n4. Surcoût production retouches visuelles suite retours Alter Scope (partagé) : +19 400 € — trois rounds de retouches sur le visuel \"Métro\" avant validation finale, chacun facturé en supplément par l'agence."
+          },
+          {
+            "type": "p",
+            "text": "Aucune de ces quatre décisions n'a fait l'objet d'un arbitrage budgétaire formel avec Théo. Chacune, prise isolément, semblait mineure (entre 11K€ et 22K€) — c'est leur cumul qui a produit l'écart de 112 000 €."
           },
           {
             "type": "h3",
@@ -592,7 +671,7 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
-            "text": "— 3 DRH ont demandé une démo suite au visuel \"Réunion\" (positif)\n— 1 cliente DRH a mentionné que le visuel \"Métro\" était \"fort mais dur\" (neutre/ambigu)\n— Decathlon : email de leur DRH reçu le 17 janvier, objet \"Retour sur campagne Lumio\" (transmis à Sonia)\n— Commentaires négatifs sur Instagram : 12 commentaires mentionnant \"stigmatisation\" / \"pas cool pour les gens qui souffrent vraiment\" — tous supprimés par modération le 15 janvier"
+            "text": "— 3 DRH ont demandé une démo suite au visuel \"Réunion\" (positif)\n— 1 cliente DRH a mentionné que le visuel \"Métro\" était \"fort mais dur\" (neutre/ambigu)\n— Decathlon : email de leur DRH reçu le 17 janvier, objet \"Retour sur campagne Lumio\" (transmis à Sonia)\n— Commentaires négatifs sur Instagram : 12 commentaires mentionnant \"stigmatisation\" / \"pas cool pour les gens qui souffrent vraiment\" — tous supprimés par modération le 15 janvier\n— Un compte associatif (SantéPsy Pro, cité dans la presse spécialisée) a partagé une capture du visuel \"Métro\" avec un commentaire critique, 340 vues, pas encore viral mais surveillé"
           },
           {
             "type": "h3",
@@ -600,7 +679,7 @@ window.PASS_CONFIG = {
           },
           {
             "type": "p",
-            "text": "J'ai publié un post LinkedIn partageant le cap des 4,2 millions d'impressions. Le post a été liké 87 fois en 6 heures et partagé 14 fois. Sonia m'a demandé de le retirer le 15 au matin — je l'ai laissé car il était déjà très engagé. Je le retire si confirmation explicite."
+            "text": "J'ai publié un post LinkedIn partageant le cap des 4,2 millions d'impressions. Le post a été liké 87 fois en 6 heures et partagé 14 fois, dont un partage par un analyste sectoriel suivi par plusieurs profils Northgate Capital. Sonia m'a demandé de le retirer le 15 au matin — je l'ai laissé car il était déjà très engagé et je craignais qu'un retrait soudain attire davantage l'attention que le post lui-même. Je le retire si confirmation explicite."
           },
           {
             "type": "h3",
@@ -713,4 +792,4 @@ window.PASS_CONFIG = {
     D.finder.order.splice(gIdx >= 0 ? gIdx + 1 : 0, 0, 'portraits');
   }
 })();
-// === [Chantier PDF+Browser] fin ===
+// === fin ===
