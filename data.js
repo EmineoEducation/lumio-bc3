@@ -332,6 +332,36 @@ La question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c
     },
     order: ['guide', 'espace']
   }
+,
+  voiceMemos: [
+    {
+      title: "Sur l'ambiance client depuis la campagne",
+      author: "Camille Ott",
+      role: "Responsable partenariats B2B",
+      date: "",
+      context: "Verbatim terrain",
+      durationSec: 88,
+      transcript: "Depuis que la campagne a commencé à tourner, j'ai des retours étranges de mes clients. Pas négatifs en façade — mais étranges. Des DRH qui me posent des questions sur \"l'approche éthique\" de Lumio, qui me demandent si on a consulté des associations. L'un d'eux m'a dit \"j'aime bien votre produit mais votre pub est un peu dure\". Je pense qu'on a surestimé notre capacité à aller sur le terrain de la souffrance visible. Notre force depuis huit ans, c'était justement de ne pas stigmatiser — de parler de prévention, de données, d'anticipation. Là on est allés sur l'image de la personne cassée et ça crée une dissonance.\n\nCe qui m'inquiète le plus, honnêtement, c'est pas un client en particulier — c'est le pattern. J'ai eu quatre échanges de ce type en dix jours, avec quatre clients différents, dans quatre secteurs différents. Quand c'est un cas isolé, je me dis que c'est une sensibilité personnelle. Quand c'est un pattern qui traverse plusieurs comptes, je me dis qu'on a raté quelque chose au niveau du message, pas juste au niveau d'une réaction individuelle. Et honnêtement je ne sais pas encore comment en parler à Sonia sans que ça ait l'air d'une attaque contre son travail — parce que ce n'est pas ça, c'est juste un signal terrain qu'elle n'a pas."
+    },
+    {
+      title: "Sur le dépassement budgétaire",
+      author: "Camille Ott",
+      role: "Responsable partenariats B2B",
+      date: "",
+      context: "Verbatim terrain",
+      durationSec: 65,
+      transcript: "Je ne savais pas qu'on était à 312 000 €. Vraiment. Théo ne nous informe pas sur les budgets en temps réel et Sonia n'en parle pas en réunion commerciale. Je l'ai appris hier soir par le mail de Théo. Ce qui m'inquiète c'est pas le montant en lui-même — c'est que si le fonds coupe les vivres maintenant, on annule Préventica et on perd notre seule fenêtre de contact physique avec les DRH dans les 6 prochains mois. C'est le pire timing possible.\n\nIl faut aussi que je dise une chose, même si c'est pas facile à dire à voix haute : moi-même j'avais un doute sur l'extension Lyon quand Sonia m'en a parlé en novembre. Je lui ai dit que le réseau tertiaire lyonnais réagissait bien, ce qui est vrai, mais je n'ai jamais dit \"vas-y, dépasse le budget\". J'ai juste donné une info terrain positive, et cette info a servi à justifier une décision que je n'avais pas à valider. Je ne sais pas si c'est important pour le rapport, mais je préfère que ce soit dit une fois plutôt que ça reste flou."
+    },
+    {
+      title: "Ce que je conseillerais si on me demandait",
+      author: "Camille Ott",
+      role: "Responsable partenariats B2B",
+      date: "",
+      context: "Verbatim terrain",
+      durationSec: 107,
+      transcript: "Si j'étais à la place de {{PRENOM}} — et j'ai pas cette responsabilité, c'est clair — ce que je ferais c'est distinguer ce qui est récupérable de ce qui ne l'est pas. Le claim juridique, on peut le changer. Le visuel \"Métro\", on peut le sortir de la rotation. Le budget dépassé, on peut l'expliquer si on présente un plan d'arrêt crédible. Ce qui est pas récupérable facilement, c'est la confiance de Théo vis-à-vis de Sonia. Et ça, c'est pas dans le rapport d'étape — c'est dans la tête de tout le monde.\n\nIl y a aussi un truc que je remarque depuis huit ans que je fais ce métier chez Lumio : à chaque fois qu'une crise éclate, tout le monde veut d'abord savoir qui est responsable, avant même de savoir ce qu'on va faire. C'est humain, mais c'est contre-productif. Si {{PRENOM}} arrive avec un rapport qui commence par \"qui a fait quoi\", Théo va lire ça comme un procès contre Sonia, et Sonia va se braquer avant même d'avoir lu le plan de reprise. Il faut inverser l'ordre : d'abord ce qu'on fait dans les 7 jours, ensuite ce qui explique pourquoi c'est arrivé — jamais l'inverse.\n\nLa question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c'est juste pour protéger Sonia, ça va pas tenir. Il faut que ce soit un vrai diagnostic. Et honnêtement, un vrai diagnostic protège aussi Sonia mieux qu'un rapport complaisant — parce que Théo saura reconnaître qu'on lui a dit la vérité, même une vérité inconfortable."
+    }
+  ]
 };
 
 // ══════════════════════════════════════════════════════════════
