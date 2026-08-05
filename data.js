@@ -823,3 +823,19 @@ window.PASS_CONFIG = {
   }
 })();
 // === fin ===
+
+// === [Carte portfolio] — 05/08/2026 · contenu propre au bloc, ajout non destructif ===
+(function () {
+  var c = window.PAC_CONFIG || window.PASS_CONFIG;
+  if (!c) return;
+  c.portfolio = {
+    missionTitre: "Reprendre en main une campagne en dérive",
+    miseEnSituation: "La campagne « Fantôme de Soi » a consommé 312 000 € sur les 200 000 € autorisés, son claim ressemble à celui déposé par Withings au Royaume-Uni, et un visuel diffusé dans le métro est accusé de stigmatiser les personnes en souffrance psychique — un client B2B de 147 000 € menace de ne pas renouveler.",
+    choix: "Un plan de reprise en trois temps : suspension immédiate du visuel contesté et sécurisation juridique du claim, réaffectation du budget restant sur les canaux à performance démontrée, puis rétablissement de la relation avec le client menaçant de partir.",
+    justification: "Traiter d'abord le risque juridique et réputationnel évite qu'une dérive budgétaire ne se transforme en perte de clients : la hiérarchisation protège la valeur déjà acquise avant de chercher à récupérer la performance de la campagne.",
+    imageSrc: ""
+  };
+  window.PAC_CONFIG = c;
+  window.PASS_CONFIG = c;
+})();
+// === [Carte portfolio] fin ===
