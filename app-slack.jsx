@@ -169,6 +169,42 @@ Style : messagerie interne. Phrases courtes, ton direct et humain, aucune formul
 Format : 2 à 3 messages courts séparés par "---SPLIT---". Chaque message 1 à 3 phrases. 150 mots cumulés maximum. Ne commence jamais par "Bonjour".`;
 };
 
+// ══════════════════════════════════════════════════════════════
+// F40 · LE COMMANDITAIRE INVENTAIT LE LIVRABLE
+// Observé en séance : à une étudiante qui signalait un bouton grisé,
+// Sonia a répondu « ton livrable c'est la note en trois paragraphes
+// qu'on a finalisée ensemble », puis lui a demandé de l'envoyer par mail.
+// Rien de tout cela n'existe : le livrable de ce bloc est composé de
+// compétences numérotées, saisies dans l'application Livrable, et aucun
+// autre canal de remise n'est valable. Le prompt ne disait nulle part
+// en quoi consiste le livrable — le modèle comblait le vide.
+// Correctif : les faits sont injectés depuis PAC_CONFIG, avec interdiction
+// d'improviser un format ou un canal de remise.
+// ══════════════════════════════════════════════════════════════
+const buildLivrableFactsBlock = () => {
+  const cfg = window.PAC_CONFIG || window.PASS_CONFIG || {};
+  const comps = cfg.competences || [];
+  const lignes = comps.length
+    ? comps.map(c => `- ${c.code} : ${c.label}${c.min ? ' (' + c.min + ' mots minimum)' : ''}`).join('\n')
+    : '- (structure non fournie : ne décris alors JAMAIS le contenu du livrable)';
+  return `
+
+═══ LE LIVRABLE — FAITS, RÈGLE ABSOLUE ═══
+
+Le livrable attendu se remplit dans l'application « Livrable » du poste de la personne. Il est composé des rubriques suivantes :
+
+${lignes}
+
+Le bouton de remise ne s'active que lorsque CHAQUE rubrique atteint son minimum de mots. Un bouton grisé signifie qu'il manque des mots quelque part, jamais une panne.
+
+Règles non négociables :
+1. Tu ne décris JAMAIS le livrable autrement que par les rubriques ci-dessus. Tu n'inventes ni format, ni nombre de paragraphes, ni nombre de sources.
+2. Tu ne dis JAMAIS avoir validé, relu ou finalisé quoi que ce soit « ensemble ». Tu n'as rien reçu tant que le livrable n'a pas été soumis.
+3. Tu ne proposes JAMAIS un autre canal de remise : ni mail, ni copier-coller, ni pièce jointe, ni message. La remise se fait uniquement par l'application Livrable. Aucune autre voie ne sera évaluée.
+4. Si on te signale un problème technique (bouton grisé, page qui ne répond pas, message d'erreur), tu réponds en une phrase que ce n'est pas de ton ressort et qu'il faut voir avec le référent de campus, puis tu reviens au fond. Tu ne proposes aucun contournement.
+5. Si on te demande de confirmer qu'un travail est « bon » alors qu'il ne t'a pas été soumis, tu dis que tu ne l'as pas encore reçu.`;
+};
+
 function SlackApp({ openChannel }) {
   const D = window.LUMIO_DATA;
 
@@ -352,7 +388,7 @@ PLAN : ${plan.substring(0, 600)}...`;
           const userPrompt = `${history}\n${_p}: ${text}\n\nRéponds maintenant en tant que ${prenomCible} (2-4 messages courts séparés par ---SPLIT---).`;
           const resp = await window.PAC_FETCH('/api/chat', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: estCommanditaire ? buildSoniaPrompt() : (buildSecondairePrompt(cible.name, roleCible) + buildDocMapBlock()), messages: [{ role: 'user', content: userPrompt }] })
+            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: (estCommanditaire ? buildSoniaPrompt() : (buildSecondairePrompt(cible.name, roleCible) + (typeof buildDocMapBlock === 'function' ? buildDocMapBlock() : ''))) + buildLivrableFactsBlock(), messages: [{ role: 'user', content: userPrompt }] })
           });
           if (!resp.ok) { const err = await resp.json().catch(() => ({})); throw new Error(err.error || `HTTP ${resp.status}`); }
           const data = await resp.json();
