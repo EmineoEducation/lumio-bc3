@@ -111,6 +111,34 @@ Format de réponse :
 - N'utilise jamais "Bonjour ${P}" ni "Merci pour ta contribution"`;
 }
 
+// ══════════════════════════════════════════════════════════════
+// F35 · INTERLOCUTEURS MUETS
+// Seul le commanditaire était branché sur l'IA. Écrire à un autre
+// personnage ajoutait le message de l'étudiant·e… et rien d'autre,
+// définitivement. Or plusieurs de ces personnages invitent explicitement
+// à leur écrire : l'étudiant·e attendait une réponse impossible.
+// Chaque interlocuteur répond désormais, dans son rôle.
+// ══════════════════════════════════════════════════════════════
+const buildSecondairePrompt = (nom, role) => {
+  const cfg = window.PAC_CONFIG || window.PASS_CONFIG || {};
+  return `Tu es ${nom}${role ? ', ' + role : ''} chez Lumio Health.
+
+Tu échanges en messagerie interne avec un·e consultant·e externe missionné·e sur ${cfg.titre || cfg.epreuve || 'la mission en cours'}. Tu n'es pas le commanditaire : tu es un collègue, une source de terrain. Tu réponds volontiers.
+
+Règles de conduite, non négociables :
+- Tu réponds TOUJOURS à la question posée, avec ce que tu sais de ton poste et de ton point de vue.
+- Tu ne renvoies JAMAIS vers quelqu'un d'autre sans avoir d'abord donné ta propre réponse.
+- Tu ne dis jamais que tu ne peux pas aider, ni que ce n'est pas ton sujet.
+- Si tu ignores quelque chose, tu le dis franchement et tu expliques pourquoi.
+- Tu ne demandes jamais d'attendre : tu donnes ta réponse maintenant.
+- Tu parles depuis ton expérience concrète, avec des exemples, pas en généralités.
+- Tu peux poser une question en retour, mais seulement après avoir répondu.
+
+Style : messagerie interne. Phrases courtes, ton direct et humain, aucune formule de politesse.
+
+Format : 2 à 3 messages courts séparés par "---SPLIT---". Chaque message 1 à 3 phrases. 150 mots cumulés maximum. Ne commence jamais par "Bonjour".`;
+};
+
 function SlackApp({ openChannel }) {
   const D = window.LUMIO_DATA;
 
@@ -272,7 +300,12 @@ PLAN : ${plan.substring(0, 600)}...`;
     const userMsg = { from: window.LUMIO_DATA?.student?.name || "Consultant·e", avatar: window.LUMIO_DATA?.student?.initial || "LB", color: '#1a2436', time, text, isMe: true };
     setChatHistory(h => ({ ...h, [activeId]: [...(h[activeId]||[]), userMsg] }));
 
-    if (isSonia) {
+    // F35 · Tout DM répond, plus seulement Sonia.
+    const cible = dms.find(d => d.id === activeId);
+    if (cible) {
+      const estCommanditaire = activeId === 'sonia';
+      const prenomCible = cible.name.split(' ')[0];
+      const roleCible = (window.LUMIO_CAST && window.LUMIO_CAST[cible.name] && window.LUMIO_CAST[cible.name].role) || '';
       const newCount = exchangeCount + 1;
       setExchangeCountLocal(newCount);
       if (window.__onSlackExchange) window.__onSlackExchange(newCount);
@@ -280,12 +313,16 @@ PLAN : ${plan.substring(0, 600)}...`;
       setSending(true);
       setTimeout(async () => {
         try {
-          const history = (chatHistory.sonia || []).filter(m => !m.typing).map(m => `${m.isMe ? ((window.LUMIO_DATA?._prenom)||'Consultant') : 'Sonia'}: ${m.text}`).join('\n');
+          // F36 · L'historique complet partait dans le prompt à chaque
+          // message et gonflait sans limite : au bout d'un moment la
+          // réponse dépassait la durée maximale de la fonction Vercel et
+          // l'appel échouait. On ne transmet plus que les 16 derniers.
+          const history = (chatHistory[activeId] || []).filter(m => !m.typing).slice(-16).map(m => `${m.isMe ? ((window.LUMIO_DATA?._prenom)||'Consultant') : prenomCible}: ${m.text}`).join('\n');
           const _p = (window.LUMIO_DATA?._prenom) || (window.LUMIO_DATA?.student?.name || '').split(' ')[0] || 'Consultant';
-          const userPrompt = `${history}\n${_p}: ${text}\n\nRéponds maintenant en tant que Sonia (2-4 messages courts séparés par ---SPLIT---).`;
+          const userPrompt = `${history}\n${_p}: ${text}\n\nRéponds maintenant en tant que ${prenomCible} (2-4 messages courts séparés par ---SPLIT---).`;
           const resp = await fetch('/api/chat', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: buildSoniaPrompt(), messages: [{ role: 'user', content: userPrompt }] })
+            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: estCommanditaire ? buildSoniaPrompt() : (buildSecondairePrompt(cible.name, roleCible) + buildDocMapBlock()), messages: [{ role: 'user', content: userPrompt }] })
           });
           if (!resp.ok) { const err = await resp.json().catch(() => ({})); throw new Error(err.error || `HTTP ${resp.status}`); }
           const data = await resp.json();
@@ -296,13 +333,17 @@ PLAN : ${plan.substring(0, 600)}...`;
             await new Promise(r => setTimeout(r, delay));
             const t = new Date();
             const tt = `${t.getHours().toString().padStart(2,'0')}:${t.getMinutes().toString().padStart(2,'0')}`;
-            setChatHistory(h => ({ ...h, sonia: [...h.sonia, { from: 'Sonia Ferracci', avatar: 'SF', color: '#c4420f', time: tt, text: reply }] }));
-            if (activeIdRef.current !== 'sonia') setUnreads(u => ({ ...u, sonia: (u.sonia || 0) + 1 }));
+            setChatHistory(h => ({ ...h, [cible.id]: [...(h[cible.id] || []), { from: cible.name, avatar: cible.avatar, color: cible.color, time: tt, text: reply }] }));
+            if (activeIdRef.current !== cible.id) setUnreads(u => ({ ...u, [cible.id]: (u[cible.id] || 0) + 1 }));
             delay = 1400 + reply.length * 8;
           }
         } catch(e) {
-          setChatHistory(h => ({ ...h, sonia: [...h.sonia, { from: 'Sonia Ferracci', avatar: 'SF', color: '#c4420f', time: 'maintenant', text: 'Je suis en réunion, on reprend ça dans 30 min.' }] }));
-          if (activeIdRef.current !== 'sonia') setUnreads(u => ({ ...u, sonia: (u.sonia || 0) + 1 }));
+          // F36 · L'ancien texte de secours (« je suis en réunion, on
+          // reprend dans 30 min ») clôturait l'échange : sur une coupure
+          // passagère, l'étudiant·e croyait son interlocuteur parti.
+          console.error('Slack · échec de réponse (' + activeId + ')', e);
+          setChatHistory(h => ({ ...h, [cible.id]: [...(h[cible.id] || []), { from: cible.name, avatar: cible.avatar, color: cible.color, time, text: "Mon message n'est pas passé — renvoie-moi ta question, je suis là." }] }));
+          if (activeIdRef.current !== cible.id) setUnreads(u => ({ ...u, [cible.id]: (u[cible.id] || 0) + 1 }));
         } finally { setSending(false); }
       }, 600);
     }
@@ -371,16 +412,17 @@ PLAN : ${plan.substring(0, 600)}...`;
               </div>
             </div>
           ))}
-          {sending && (
+          {sending && dms.some(d => d.id === activeId) && (
             <div style={slackStyles.message}>
-              <div style={{ ...slackStyles.msgAvatar, background: '#c4420f' }}>SF</div>
+              {/* F35 · L'indicateur affichait Sonia quel que soit l'interlocuteur. */}
+              <div style={{ ...slackStyles.msgAvatar, background: (dms.find(d => d.id === activeId) || {}).color || '#c4420f' }}>{(dms.find(d => d.id === activeId) || {}).avatar || 'SF'}</div>
               <div>
                 <div style={{ display: 'flex', gap: 4, padding: '6px 0' }}>
                   <span style={slackStyles.typeDot} />
                   <span style={{ ...slackStyles.typeDot, animationDelay: '0.15s' }} />
                   <span style={{ ...slackStyles.typeDot, animationDelay: '0.3s' }} />
                 </div>
-                <div style={{ fontSize: 11, color: 'var(--ink-faint)' }}>Sonia est en train d'écrire…</div>
+                <div style={{ fontSize: 11, color: 'var(--ink-faint)' }}>{((dms.find(d => d.id === activeId) || {}).name || 'Sonia').split(' ')[0]} est en train d'écrire…</div>
               </div>
             </div>
           )}
@@ -391,7 +433,7 @@ PLAN : ${plan.substring(0, 600)}...`;
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={onKeyDown}
-              placeholder={isSonia ? 'Écris à Sonia…  (Entrée pour envoyer)' : `Message ${activeMeta?.type === 'channel' ? '#' + activeMeta?.name : activeMeta?.name}`}
+              placeholder={dms.some(d => d.id === activeId) ? `Écris à ${(dms.find(d => d.id === activeId) || {}).name.split(' ')[0]}…  (Entrée pour envoyer)` : `Message ${activeMeta?.type === 'channel' ? '#' + activeMeta?.name : activeMeta?.name}`}
               style={slackStyles.textarea}
               rows={2}
             />
