@@ -115,6 +115,40 @@ if (!window.PAC_PERSIST) {
 }
 
 // ─── Sonia AI prompt ─────────────────────────────────────────
+// ══════════════════════════════════════════════════════════════
+// F32 · FICHIER FANTÔME — carte des documents
+// Le commanditaire évoquait des documents sans savoir où ils se
+// trouvent dans l'interface. Quand l'étudiant·e répondait « je ne le
+// trouve pas », le modèle improvisait un Drive, une pièce jointe ou un
+// « je te le renvoie » — trois impasses.
+// La localisation réelle vient de window.LUMIO_DATA.docIndex (data.js).
+// Générique — aucun contenu de bloc écrit ici.
+// ══════════════════════════════════════════════════════════════
+const buildDocMapBlock = () => {
+  const D = window.LUMIO_DATA || {};
+  const idx = D.docIndex || [];
+  const lignes = idx.length
+    ? idx.map(d => `- ${d.nom} → ${d.ou}`).join('\n')
+    : "- (aucun index fourni : ne cite alors AUCUN document par son emplacement)";
+  const prec = (D.docPrecisions || []).length
+    ? '\n\nPrécisions :\n' + D.docPrecisions.map(p => '- ' + p).join('\n')
+    : '';
+  return `
+
+═══ LOCALISATION DES DOCUMENTS — RÈGLE ABSOLUE ═══
+
+Tous les documents sont DÉJÀ installés sur le poste de mission de la personne. Rien ne reste à envoyer.
+
+${lignes}${prec}
+
+Règles non négociables :
+1. Si on te demande où trouver un document, tu donnes sa localisation exacte telle qu'écrite ci-dessus, en UNE phrase, puis tu relances immédiatement sur le fond.
+2. Tu ne proposes JAMAIS d'envoyer, de renvoyer, de transférer, de partager, de joindre ou de déposer un fichier. Tu n'en as pas la possibilité — tout est déjà là.
+3. Tu ne mentionnes JAMAIS de Drive, Dropbox, Notion, SharePoint, WeTransfer, pièce jointe, lien de téléchargement, ni aucun outil qui n'existe pas sur ce poste.
+4. Tu ne cites JAMAIS un document absent de la liste ci-dessus. Si la personne réclame une pièce qui n'existe pas, tu le dis franchement : elle n'est pas au dossier, et c'est à elle de traiter ce manque dans sa production.
+5. Tu ne décris pas le contenu d'un document à la place de la personne. Tu dis où il est ; elle le lit.`;
+};
+
 function buildSoniaPrompt() {
   const P = (window.LUMIO_DATA?._prenom) || (window.LUMIO_DATA?.student?.name || '').split(' ')[0] || 'le consultant';
   return `Tu es Sonia Ferracci, Directrice Marketing de Lumio Health, 7 mois en poste.
@@ -388,7 +422,7 @@ PLAN : ${plan.substring(0, 600)}...`;
           const userPrompt = `${history}\n${_p}: ${text}\n\nRéponds maintenant en tant que ${prenomCible} (2-4 messages courts séparés par ---SPLIT---).`;
           const resp = await window.PAC_FETCH('/api/chat', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: (estCommanditaire ? buildSoniaPrompt() : (buildSecondairePrompt(cible.name, roleCible) + (typeof buildDocMapBlock === 'function' ? buildDocMapBlock() : ''))) + buildLivrableFactsBlock(), messages: [{ role: 'user', content: userPrompt }] })
+            body: JSON.stringify({ model: 'claude-sonnet-4-6', max_tokens: 600, system: (estCommanditaire ? buildSoniaPrompt() : buildSecondairePrompt(cible.name, roleCible)) + buildDocMapBlock() + buildLivrableFactsBlock(), messages: [{ role: 'user', content: userPrompt }] })
           });
           if (!resp.ok) { const err = await resp.json().catch(() => ({})); throw new Error(err.error || `HTTP ${resp.status}`); }
           const data = await resp.json();

@@ -319,14 +319,25 @@ La question que {{PRENOM}} doit se poser c'est : mon rapport protège qui ? Si c
           { kind: 'mail', name: 'Brief de mission', app: 'mail', props: { openId: 'brief' } }
         ]
       },
+      // F32 · « Fichier fantôme » — le brief de Sonia dit « Tout est dans ton
+      // espace » puis nomme quatre pièces (mail de Théo, brief Alter Scope,
+      // résultats de Yassine, réaction de Decathlon). Le dossier n'en
+      // contenait aucune : elles étaient dispersées dans Mail, Aperçu et
+      // Mémos vocaux, sans rien pour y conduire.
       espace: {
-        title: 'Espace de travail',
+        title: 'Espace de travail — dossier Fantôme de Soi',
         sidebar: 'Espace de travail',
         icon: '📁',
         items: [
-          { kind: 'mail', name: 'Boîte mail', app: 'mail', props: {} },
-          { kind: 'note', name: 'Notes', app: 'notes', props: {} },
-          { kind: 'audio', name: 'Mémos vocaux', app: 'voice', props: {} }
+          { kind: 'mail',  label: 'MAIL', name: '00 — Brief de mission (Sonia Ferracci)',        app: 'mail',    props: { openId: 'brief' } },
+          { kind: 'mail',  label: 'MAIL', name: '01 — Mail de Théo Marczak (réactions jury)',    app: 'mail',    props: { openId: 'theo' } },
+          { kind: 'pdf',   label: 'PDF',  name: '02 — Brief créatif Alter Scope',                app: 'pdf',     props: { openDoc: 'brief-alterscope' } },
+          { kind: 'pdf',   label: 'PDF',  name: '03 — Résultats intermédiaires (Y. Morel)',      app: 'pdf',     props: { openDoc: 'resultats-campagne' } },
+          { kind: 'mail',  label: 'MAIL', name: '04 — Réaction Decathlon',                       app: 'mail',    props: { openId: 'decathlon' } },
+          { kind: 'audio', label: 'M4A',  name: '05 — Mémos de Camille Ott (3)',                 app: 'voice',   props: {} },
+          { kind: 'doc',   label: 'WEB',  name: '06 — Revue de presse (3 articles)',             app: 'browser', props: { openTab: 'press-0' } },
+          { kind: 'doc',   label: 'NOTE', name: 'Chronologie de la campagne',                    app: 'notes',   props: { openNote: 'chrono' } },
+          { kind: 'note',  label: 'TXT',  name: 'Mes notes.txt',                                 app: 'notepad', props: {} }
         ]
       }
     },
@@ -839,3 +850,38 @@ window.PASS_CONFIG = {
   window.PASS_CONFIG = c;
 })();
 // === [Carte portfolio] fin ===
+
+// === [F32 · Fichier fantôme] docIndex — 27/08/2026 =============
+// Le brief de Sonia annonce « Tout est dans ton espace » et nomme quatre
+// pièces ; le dossier Finder n'en contenait aucune. Ce bloc est la source
+// de vérité de la localisation, lue par app-slack.jsx et injectée dans le
+// prompt du commanditaire : Sonia ne peut plus renvoyer vers un fichier
+// inexistant ni promettre de « renvoyer » quoi que ce soit.
+// ⚠️ Toute pièce ajoutée au dossier « Espace de travail » doit être
+// répercutée ici — et réciproquement.
+(function () {
+  var D = window.LUMIO_DATA;
+  if (!D) return;
+
+  D.docLocationHint = "Tout est dans le Finder de ton poste — dossier « Espace de travail », numéroté dans l'ordre où je te les cite.";
+
+  D.docIndex = [
+    { nom: "Brief de mission (Sonia Ferracci)",                          ou: "Mail → « Brief de mission » — aussi dans Finder / Espace de travail" },
+    { nom: "Mail de Théo Marczak, réactions du jury",                    ou: "Mail → « FWD : Réactions jury — Campagne Fantôme de Soi »" },
+    { nom: "Brief créatif initial de l'agence Alter Scope",              ou: "Aperçu (PDF) → onglet « Brief créatif »" },
+    { nom: "Résultats intermédiaires publiés par Yassine Morel",         ou: "Aperçu (PDF) → onglet « Résultats intermédiaires »" },
+    { nom: "Réaction de Decathlon sur la campagne",                      ou: "Mail → « Retour sur votre campagne actuelle »" },
+    { nom: "Mémos vocaux de Camille Ott (3, transcrits)",                ou: "Mémos vocaux" },
+    { nom: "Revue de presse : Stratégies, CB News, Maddyness",           ou: "Safari → trois onglets déjà ouverts" },
+    { nom: "Chronologie de la campagne",                                 ou: "Notes → « Chronologie »" },
+    { nom: "Portraits presse des 5 dirigeants",                          ou: "Finder → dossier « Portraits »" },
+    { nom: "Bloc-notes personnel de l'étudiant·e",                       ou: "Bloc-notes (Mes notes.txt)" }
+  ];
+
+  // Pièces que la personne va réclamer et qui N'EXISTENT PAS au dossier.
+  D.docPrecisions = [
+    "Il n'existe aucune trace écrite de la rallonge budgétaire évoquée en board : c'est précisément le problème, elle n'a jamais été votée formellement. Ne renvoie vers aucun document qui l'attesterait.",
+    "L'avis de l'avocate sur le claim « Votre corps parle avant vous » n'est pas au dossier sous forme de note juridique. Seule la demande de retrait préventif est connue, telle qu'elle est rapportée dans le brief."
+  ];
+})();
+// === [F32] fin =================================================
